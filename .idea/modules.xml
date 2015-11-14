@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
+      <module fileurl="file://$PROJECT_DIR$/PhelpRepo.iml" filepath="$PROJECT_DIR$/PhelpRepo.iml" />
+=======
       <module fileurl="file://$PROJECT_DIR$/Phelp_android.iml" filepath="$PROJECT_DIR$/Phelp_android.iml" />
+>>>>>>> 1b17d2dca0a8126dcdb0a3cd118142ef09daf28a
       <module fileurl="file://$PROJECT_DIR$/mobile/mobile.iml" filepath="$PROJECT_DIR$/mobile/mobile.iml" />
       <module fileurl="file://$PROJECT_DIR$/wear/wear.iml" filepath="$PROJECT_DIR$/wear/wear.iml" />
     </modules>
