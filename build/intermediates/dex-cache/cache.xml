@@ -2,555 +2,200 @@
 <items version="2" >
 
     <item
-<<<<<<< HEAD
-        jar="C:\PhelpRepo\mobile\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\libs\internal_impl-22.2.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="0632f06970823b7e3436f649bfa65b47035c91d0">
-        <dex dex="C:\PhelpRepo\mobile\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-2cc44aac747fe59bf2c6d4c19370677916b78f1c.jar" />
-    </item>
-    <item
-        jar="C:\PhelpAndroid\mobile\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="C:\PhelpAndroid\mobile\build\intermediates\pre-dexed\debug\classes-afb5894cdb1e884c5d362a88d51d2ed5c001fb9d.jar" />
-    </item>
-    <item
-        jar="C:\PhelpRepo\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="82825756edeeb3b56b15e73b2edd56e93da5a444">
-        <dex dex="C:\PhelpRepo\mobile\build\intermediates\pre-dexed\debug\classes-a95c90da18ee361a33a1629b0d3f5d8f89925391.jar" />
-    </item>
-    <item
-        jar="C:\PhelpRepo\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="3c729e6d76a36c5dc27e6a4c4009296f49eaa88a">
-        <dex dex="C:\PhelpRepo\mobile\build\intermediates\pre-dexed\debug\classes-023842e875c92888e6ad8904df612461e281ef1b.jar" />
-    </item>
-    <item
-        jar="C:\PhelpRepo\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="2a7e47da654546f9457deb6132364f1bf33a1857">
-        <dex dex="C:\PhelpRepo\mobile\build\intermediates\pre-dexed\debug\classes-c3cadc6821ba90f44fe4f3eb0881300e0c84fdc8.jar" />
-=======
-        jar="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="041d93cf0533591c29d1d7263b2fa114dbfb20bd">
-        <dex dex="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\pre-dexed\debug\classes-82e81394039a8f11ae709e3c116c2ce4673d011e.jar" />
-    </item>
-    <item
-        jar="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
-        <dex dex="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\pre-dexed\debug\classes-43db5457c2f1203d2f15654eb2ab237afd5e7d15.jar" />
-    </item>
-    <item
-        jar="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d61920aba361832a9545a43fa8c9453eb02f18f7">
-        <dex dex="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\pre-dexed\debug\classes-2e68afd76627d9084ad992e741cdc10b4f628fb8.jar" />
-    </item>
-    <item
-        jar="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-c3606c5148f0e1fbb17de0e59377dbaf4fecf62b.jar" />
-    </item>
-    <item
-        jar="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="482de223655d06253cc6a4955d653f8994169500">
-        <dex dex="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\pre-dexed\debug\classes-ee3e16b3ddc750bbe68005a636feed14ecf6656a.jar" />
->>>>>>> 1b17d2dca0a8126dcdb0a3cd118142ef09daf28a
-    </item>
-    <item
-        jar="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
-        <dex dex="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\pre-dexed\debug\classes-3b7ca595d3265d5dc93ac96a4cf9c5e57aea8fe7.jar" />
-    </item>
-    <item
-<<<<<<< HEAD
-        jar="C:\PhelpRepo\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="b92002cb2f0e11a226ac5bac6dff1dc2a9d0b774">
-        <dex dex="C:\PhelpRepo\mobile\build\intermediates\pre-dexed\debug\classes-82a5c5dc587a7323914ff2b417171398d9093f20.jar" />
-    </item>
-    <item
-        jar="C:\PhelpAndroid\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d294caf562c4c678b2ef351662a0ca6f1a4d06c0">
-        <dex dex="C:\PhelpAndroid\mobile\build\intermediates\pre-dexed\debug\classes-4a5c8a07e86c0a6ab517b08cde08c7eccb8450b0.jar" />
-    </item>
-    <item
-        jar="C:\PhelpRepo\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d294caf562c4c678b2ef351662a0ca6f1a4d06c0">
-        <dex dex="C:\PhelpRepo\mobile\build\intermediates\pre-dexed\debug\classes-67566f33f4c821a8df352f5470de139844149069.jar" />
-    </item>
-    <item
-        jar="C:\PhelpRepo\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="3178362320bcf51228835b60ff978efadfd1f783">
-        <dex dex="C:\PhelpRepo\mobile\build\intermediates\pre-dexed\debug\classes-f8a0eda2b80ada9938d7c7788008b81897998249.jar" />
-    </item>
-    <item
-        jar="C:\PhelpAndroid\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
-        <dex dex="C:\PhelpAndroid\mobile\build\intermediates\pre-dexed\debug\classes-69bbfd80a1115a76e553a70a5bc9d4cd6975b06c.jar" />
-    </item>
-    <item
-        jar="C:\PhelpAndroid\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="82825756edeeb3b56b15e73b2edd56e93da5a444">
-        <dex dex="C:\PhelpAndroid\mobile\build\intermediates\pre-dexed\debug\classes-c23fe5f115aa0beeea0e9292a107b0886b992870.jar" />
-    </item>
-    <item
-        jar="C:\PhelpAndroid\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="9cf8c0ef60847621c7ad00b4f78dbfc9daba4af2">
-        <dex dex="C:\PhelpAndroid\mobile\build\intermediates\pre-dexed\debug\classes-bd7cfafa3bfab9ba6cf9c071b832dba42532299d.jar" />
-    </item>
-    <item
-        jar="C:\PhelpRepo\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
-        <dex dex="C:\PhelpRepo\mobile\build\intermediates\pre-dexed\debug\classes-a3ddb8ae71cd9c8983c9d4488e052f508ca97886.jar" />
-    </item>
-    <item
-        jar="C:\PhelpRepo\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
-        <dex dex="C:\PhelpRepo\mobile\build\intermediates\pre-dexed\debug\classes-c9b00b484e54d77b7c1452494715d639cd5fadb1.jar" />
-    </item>
-    <item
-        jar="C:\PhelpRepo\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="041d93cf0533591c29d1d7263b2fa114dbfb20bd">
-        <dex dex="C:\PhelpRepo\mobile\build\intermediates\pre-dexed\debug\classes-44dde29a944c8ba3a7be499a4225cf430f43b2d5.jar" />
-    </item>
-    <item
-        jar="C:\PhelpAndroid\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="3aed37c38c56679602255dd72ef356da5d327cda">
-        <dex dex="C:\PhelpAndroid\mobile\build\intermediates\pre-dexed\debug\classes-2679bcf47ce3e7d428df85a03293f6fc0fd0f34b.jar" />
-    </item>
-    <item
-        jar="C:\PhelpAndroid\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="3178362320bcf51228835b60ff978efadfd1f783">
-        <dex dex="C:\PhelpAndroid\mobile\build\intermediates\pre-dexed\debug\classes-71333bcc4ceeddb87e1b859578780dc237483c18.jar" />
-    </item>
-    <item
-        jar="C:\PhelpAndroid\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d61920aba361832a9545a43fa8c9453eb02f18f7">
-        <dex dex="C:\PhelpAndroid\mobile\build\intermediates\pre-dexed\debug\classes-76ea3a60aecf7b83cb3930de93272f6331a9e0ec.jar" />
-=======
-        jar="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="97f3b099801a9ad9d70e835b9125273e986eb68d">
-        <dex dex="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\pre-dexed\debug\classes-59f33e8f831af01d29127ab2543600b0aefe8dd6.jar" />
-    </item>
-    <item
-        jar="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="2a7e47da654546f9457deb6132364f1bf33a1857">
-        <dex dex="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\pre-dexed\debug\classes-551240da63d4befd8a0ee141629d4270ff521531.jar" />
-    </item>
-    <item
-        jar="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="325788a04b436a0bccbc5b4c54cf0f12ebdcbd2d">
-        <dex dex="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\pre-dexed\debug\classes-fbfa895b92047e4c5d3f0fcb05cb1507ab13b955.jar" />
-    </item>
-    <item
-        jar="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="95758a2905669affbffc5ddd262921d375674fad">
-        <dex dex="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\pre-dexed\debug\classes-8cf938cc80463415ac5e151356e30733f0a0d5d5.jar" />
-    </item>
-    <item
-        jar="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d294caf562c4c678b2ef351662a0ca6f1a4d06c0">
-        <dex dex="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\pre-dexed\debug\classes-0d1014c1ae7fe3056ac19f5066d3d886990c5a63.jar" />
-    </item>
-    <item
-        jar="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="dcf8c83c3dead00a6c4fe313e95f7aaca20dc641">
-        <dex dex="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\pre-dexed\debug\classes-e5bed69f74135d346f2fdd95837e3c993a1791f8.jar" />
-    </item>
-    <item
-        jar="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="3aed37c38c56679602255dd72ef356da5d327cda">
-        <dex dex="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\pre-dexed\debug\classes-5f22c897dc3877774323b7403854511cfb4a951c.jar" />
-    </item>
-    <item
-        jar="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="17449c47df35c754b257532052f1270c444f7993">
-        <dex dex="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\pre-dexed\debug\classes-067490c913823f16d75032ebceb41c0e891a3b72.jar" />
-    </item>
-    <item
-        jar="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="9cf8c0ef60847621c7ad00b4f78dbfc9daba4af2">
-        <dex dex="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\pre-dexed\debug\classes-24d8c1b0f5ded75410ab1b5c6ed9bf5b0e0a0ebc.jar" />
-    </item>
-    <item
-        jar="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\libs\internal_impl-22.2.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="0632f06970823b7e3436f649bfa65b47035c91d0">
-        <dex dex="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-d25fda0b6aa779158fba182a3bd8ded88e94ee8e.jar" />
-    </item>
-    <item
-        jar="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="b92002cb2f0e11a226ac5bac6dff1dc2a9d0b774">
-        <dex dex="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\pre-dexed\debug\classes-f391ba886f6a1f076d00087779bb50202d47b3f2.jar" />
->>>>>>> 1b17d2dca0a8126dcdb0a3cd118142ef09daf28a
-    </item>
-    <item
-        jar="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="3c729e6d76a36c5dc27e6a4c4009296f49eaa88a">
-        <dex dex="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\pre-dexed\debug\classes-9fbe7b3cca8143f908b18e275af00ec1cbb58c45.jar" />
-    </item>
-    <item
-<<<<<<< HEAD
-        jar="C:\PhelpAndroid\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="b92002cb2f0e11a226ac5bac6dff1dc2a9d0b774">
-        <dex dex="C:\PhelpAndroid\mobile\build\intermediates\pre-dexed\debug\classes-edc8591d56f482353724fa4b8f8cc9cd30df72d4.jar" />
-    </item>
-    <item
-        jar="C:\PhelpAndroid\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="325788a04b436a0bccbc5b4c54cf0f12ebdcbd2d">
-        <dex dex="C:\PhelpAndroid\mobile\build\intermediates\pre-dexed\debug\classes-70ef1f8750fdb9bfd0a76830d3239928d2837026.jar" />
-    </item>
-    <item
-        jar="C:\PhelpRepo\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="325788a04b436a0bccbc5b4c54cf0f12ebdcbd2d">
-        <dex dex="C:\PhelpRepo\mobile\build\intermediates\pre-dexed\debug\classes-b13789708ba91f05075397a676d739f205d7f893.jar" />
-    </item>
-    <item
-        jar="C:\PhelpAndroid\mobile\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="dcf8c83c3dead00a6c4fe313e95f7aaca20dc641">
-        <dex dex="C:\PhelpAndroid\mobile\build\intermediates\pre-dexed\debug\classes-ea0ac2fad621936b5e910845e208914d8eb96445.jar" />
-=======
-        jar="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\8.1.0\jars\classes.jar"
+        jar="C:\Phelp_v1_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\8.1.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="997773777cf3904c11d6764fe3b7668538220e49">
-        <dex dex="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\pre-dexed\debug\classes-63aef86555ddb187b8bfb4e1c4e05bb7f6156be0.jar" />
+        <dex dex="C:\Phelp_v1_android\mobile\build\intermediates\pre-dexed\debug\classes-49b642ba8244e0774f1de9d8657ca6ed54f01360.jar" />
     </item>
     <item
-        jar="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\pre-dexed\debug\classes-04949e1c8ab519acdcf9185c465e59cd77d7677c.jar" />
-    </item>
-    <item
-        jar="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="993834cb17d07d51b92db89d2c330243592ebf77">
-        <dex dex="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\pre-dexed\debug\classes-f38f929c92194ff4bd9fa70e159532fe69189ed9.jar" />
->>>>>>> 1b17d2dca0a8126dcdb0a3cd118142ef09daf28a
-    </item>
-    <item
-        jar="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="82825756edeeb3b56b15e73b2edd56e93da5a444">
-        <dex dex="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\pre-dexed\debug\classes-d31a47f7ae47b4c6b7a76a1e9fbfb0b05bab75d7.jar" />
-    </item>
-    <item
-<<<<<<< HEAD
-        jar="C:\PhelpAndroid\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="993834cb17d07d51b92db89d2c330243592ebf77">
-        <dex dex="C:\PhelpAndroid\mobile\build\intermediates\pre-dexed\debug\classes-273f398383db8eb40c9f59d79ac309afe3a8a7c1.jar" />
-    </item>
-    <item
-        jar="C:\PhelpAndroid\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="3c729e6d76a36c5dc27e6a4c4009296f49eaa88a">
-        <dex dex="C:\PhelpAndroid\mobile\build\intermediates\pre-dexed\debug\classes-ec2e3568311bc82f803366de3eebe091542d43cd.jar" />
-    </item>
-    <item
-        jar="C:\PhelpRepo\mobile\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="C:\PhelpRepo\mobile\build\intermediates\pre-dexed\debug\classes-04f7415a7b7415fa97140e0da002b6810c670d6d.jar" />
-    </item>
-    <item
-        jar="C:\PhelpRepo\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="993834cb17d07d51b92db89d2c330243592ebf77">
-        <dex dex="C:\PhelpRepo\mobile\build\intermediates\pre-dexed\debug\classes-3f53dbaebdc1c97c8c11520fb2003f7c50b816c4.jar" />
-    </item>
-    <item
-        jar="C:\PhelpRepo\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\8.1.0\jars\classes.jar"
+        jar="C:\Phelp_v1_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\8.1.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="17449c47df35c754b257532052f1270c444f7993">
-        <dex dex="C:\PhelpRepo\mobile\build\intermediates\pre-dexed\debug\classes-03e58e9d42c8073c908e833b3e2b11ac653acb2e.jar" />
+        <dex dex="C:\Phelp_v1_android\mobile\build\intermediates\pre-dexed\debug\classes-131966cef5828168ca868213d7772f52e1839079.jar" />
     </item>
     <item
-        jar="C:\PhelpAndroid\mobile\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="C:\PhelpAndroid\mobile\build\intermediates\pre-dexed\debug\classes-f08b520e26d38ac64064ae43451711b9f5b15b34.jar" />
-    </item>
-    <item
-        jar="C:\PhelpRepo\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="997773777cf3904c11d6764fe3b7668538220e49">
-        <dex dex="C:\PhelpRepo\mobile\build\intermediates\pre-dexed\debug\classes-a8504fed2948e0fa7627fb78c8849536308272c3.jar" />
-    </item>
-    <item
-        jar="C:\PhelpRepo\mobile\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="C:\PhelpRepo\mobile\build\intermediates\pre-dexed\debug\classes-57173f31c62b4207593dd8d4840548258937926b.jar" />
-    </item>
-    <item
-        jar="C:\PhelpAndroid\mobile\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\libs\internal_impl-22.2.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="0632f06970823b7e3436f649bfa65b47035c91d0">
-        <dex dex="C:\PhelpAndroid\mobile\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-7f82ccfa7ae45e1b6b1014926e321c656d3a92c0.jar" />
-    </item>
-    <item
-        jar="C:\PhelpRepo\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d61920aba361832a9545a43fa8c9453eb02f18f7">
-        <dex dex="C:\PhelpRepo\mobile\build\intermediates\pre-dexed\debug\classes-17d75310b00a1db5a31c198b26e40dcb5cb6015a.jar" />
-=======
-        jar="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="3b05c18f60969ecc2ba49c0409c4b96be2d9cb0c">
-        <dex dex="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\pre-dexed\debug\classes-ea303038bb11045e64c3851a3caff2af29229831.jar" />
-    </item>
-    <item
-        jar="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\pre-dexed\debug\classes-6f2df173e27f6249fdb109e6eec849749a2e0849.jar" />
->>>>>>> 1b17d2dca0a8126dcdb0a3cd118142ef09daf28a
-    </item>
-    <item
-        jar="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d93480da1d303122ee67dc3bc23e6297bdef9951">
-        <dex dex="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\pre-dexed\debug\classes-88704a3d1c381dc55cda7355741b220c914cccd7.jar" />
-    </item>
-    <item
-<<<<<<< HEAD
-        jar="C:\PhelpAndroid\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d93480da1d303122ee67dc3bc23e6297bdef9951">
-        <dex dex="C:\PhelpAndroid\mobile\build\intermediates\pre-dexed\debug\classes-9a316fd847c2e82171cfd71fb7871d817523f584.jar" />
-    </item>
-    <item
-        jar="C:\PhelpAndroid\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="95758a2905669affbffc5ddd262921d375674fad">
-        <dex dex="C:\PhelpAndroid\mobile\build\intermediates\pre-dexed\debug\classes-c311d593cb7823115eeaf6fb0bf32f948112eeb8.jar" />
-    </item>
-    <item
-        jar="C:\PhelpRepo\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\8.1.0\jars\classes.jar"
+        jar="C:\Phelp_v1_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\8.1.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="dcb5b75baf05d92e61d5706737200ee55949f97b">
-        <dex dex="C:\PhelpRepo\mobile\build\intermediates\pre-dexed\debug\classes-7d5b364d9020c8ba7aa370120632894a28685ea7.jar" />
+        <dex dex="C:\Phelp_v1_android\mobile\build\intermediates\pre-dexed\debug\classes-97eeb8aca64fd5e122e01735a82093162ef95171.jar" />
     </item>
     <item
-        jar="C:\PhelpRepo\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="95758a2905669affbffc5ddd262921d375674fad">
-        <dex dex="C:\PhelpRepo\mobile\build\intermediates\pre-dexed\debug\classes-578cda98301d7f71b3f90e9c4d0163e586013067.jar" />
-    </item>
-    <item
-        jar="C:\PhelpAndroid\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="17449c47df35c754b257532052f1270c444f7993">
-        <dex dex="C:\PhelpAndroid\mobile\build\intermediates\pre-dexed\debug\classes-f1f72876472dc2362d912e515f80fb8616e484d4.jar" />
-    </item>
-    <item
-        jar="C:\PhelpRepo\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="482de223655d06253cc6a4955d653f8994169500">
-        <dex dex="C:\PhelpRepo\mobile\build\intermediates\pre-dexed\debug\classes-adb32f0d191b41b33e499ea449ee9d3859477bf2.jar" />
-    </item>
-    <item
-        jar="C:\PhelpRepo\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d93480da1d303122ee67dc3bc23e6297bdef9951">
-        <dex dex="C:\PhelpRepo\mobile\build\intermediates\pre-dexed\debug\classes-f9087817d569c4d6687f9d97582d770061c8ef9b.jar" />
-    </item>
-    <item
-        jar="C:\PhelpRepo\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="9cf8c0ef60847621c7ad00b4f78dbfc9daba4af2">
-        <dex dex="C:\PhelpRepo\mobile\build\intermediates\pre-dexed\debug\classes-20b9d481dedcad00bddd8fd1790253a27e3d5963.jar" />
-    </item>
-    <item
-        jar="C:\PhelpRepo\mobile\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="C:\PhelpRepo\mobile\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-8aecca665f8e6693ef0cfb9cdb25b5187f2f918b.jar" />
-    </item>
-    <item
-        jar="C:\PhelpRepo\mobile\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="dcf8c83c3dead00a6c4fe313e95f7aaca20dc641">
-        <dex dex="C:\PhelpRepo\mobile\build\intermediates\pre-dexed\debug\classes-82f0d2248f3d47a73a99f0ec87493999382aca8e.jar" />
-    </item>
-    <item
-        jar="C:\PhelpAndroid\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="041d93cf0533591c29d1d7263b2fa114dbfb20bd">
-        <dex dex="C:\PhelpAndroid\mobile\build\intermediates\pre-dexed\debug\classes-5ab8d22b65e8035518541af2712eb14f55c22672.jar" />
-    </item>
-    <item
-        jar="C:\PhelpRepo\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\8.1.0\jars\classes.jar"
+        jar="C:\Phelp_v1_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\8.1.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="3b05c18f60969ecc2ba49c0409c4b96be2d9cb0c">
-        <dex dex="C:\PhelpRepo\mobile\build\intermediates\pre-dexed\debug\classes-d8ccb3754f2483e7d1f7f8de00b9e88c199398bb.jar" />
-=======
-        jar="C:\Users\MARCELO\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        <dex dex="C:\Phelp_v1_android\mobile\build\intermediates\pre-dexed\debug\classes-ea86c5b5df76b75418823857b4f987100b4a3d42.jar" />
+    </item>
+    <item
+        jar="C:\Phelp_v1_android\mobile\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="0632f06970823b7e3436f649bfa65b47035c91d0">
+        <dex dex="C:\Phelp_v1_android\mobile\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-67d8eb3f69dade8093f222dd3c41395ebc4ec2c0.jar" />
+    </item>
+    <item
+        jar="C:\Phelp_v1_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="82825756edeeb3b56b15e73b2edd56e93da5a444">
+        <dex dex="C:\Phelp_v1_android\mobile\build\intermediates\pre-dexed\debug\classes-f0c079c7b6648fe414aed2d021d92ec1333b8f13.jar" />
+    </item>
+    <item
+        jar="C:\Phelp_v1_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="9cf8c0ef60847621c7ad00b4f78dbfc9daba4af2">
+        <dex dex="C:\Phelp_v1_android\mobile\build\intermediates\pre-dexed\debug\classes-6e9d66db60fad954ae7dca46a47f8d50d27cb699.jar" />
+    </item>
+    <item
+        jar="C:\Phelp_v1_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="482de223655d06253cc6a4955d653f8994169500">
+        <dex dex="C:\Phelp_v1_android\mobile\build\intermediates\pre-dexed\debug\classes-8e3b5ccd8e83cbc50b594db6f22006af9383bfaa.jar" />
+    </item>
+    <item
+        jar="C:\Phelp_v1_android\mobile\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="C:\Phelp_v1_android\mobile\build\intermediates\pre-dexed\debug\classes-1c98fdc88a04d2f5859524e390c21fb146a27732.jar" />
+    </item>
+    <item
+        jar="C:\Phelp_v1_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3aed37c38c56679602255dd72ef356da5d327cda">
+        <dex dex="C:\Phelp_v1_android\mobile\build\intermediates\pre-dexed\debug\classes-2799961a586f3b608102e5ff445baf09505305eb.jar" />
+    </item>
+    <item
+        jar="C:\Phelp_v1_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
+        <dex dex="C:\Phelp_v1_android\mobile\build\intermediates\pre-dexed\debug\classes-eee912c32c07dede33b6c050f47792b863a72811.jar" />
+    </item>
+    <item
+        jar="C:\Phelp_v1_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="b92002cb2f0e11a226ac5bac6dff1dc2a9d0b774">
+        <dex dex="C:\Phelp_v1_android\mobile\build\intermediates\pre-dexed\debug\classes-eb43c7f23638bc8c9c5636529a98a9d338cc2dde.jar" />
+    </item>
+    <item
+        jar="C:\Phelp_v1_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d294caf562c4c678b2ef351662a0ca6f1a4d06c0">
+        <dex dex="C:\Phelp_v1_android\mobile\build\intermediates\pre-dexed\debug\classes-6d4ed87f0dcb9b4114b94e5fdab60d7c906d950b.jar" />
+    </item>
+    <item
+        jar="C:\Phelp_v1_android\mobile\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="C:\Phelp_v1_android\mobile\build\intermediates\pre-dexed\debug\classes-0b379a85525dbc559eb936fd1bd2d530fbf676ed.jar" />
+    </item>
+    <item
+        jar="C:\Phelp_v1_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3c729e6d76a36c5dc27e6a4c4009296f49eaa88a">
+        <dex dex="C:\Phelp_v1_android\mobile\build\intermediates\pre-dexed\debug\classes-3c4ba1f988f4e0496427ddc2c9b3b650cbd9adc0.jar" />
+    </item>
+    <item
+        jar="C:\Phelp_v1_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="993834cb17d07d51b92db89d2c330243592ebf77">
+        <dex dex="C:\Phelp_v1_android\mobile\build\intermediates\pre-dexed\debug\classes-a552ef6eea1756a36739bfe5735eb1305cb9b500.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jos\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-3b8026df37919d459b3955b0265f7b49354c1f53.jar" />
+        <dex dex="C:\Phelp_v1_android\mobile\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-d7017edc58f37f6389c8ee5c208c367cae25f920.jar" />
     </item>
     <item
-        jar="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\8.1.0\jars\classes.jar"
+        jar="C:\Phelp_v1_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.1.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="dcb5b75baf05d92e61d5706737200ee55949f97b">
-        <dex dex="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\pre-dexed\debug\classes-2958ede765ed92310098372db5fdcf317726b66b.jar" />
->>>>>>> 1b17d2dca0a8126dcdb0a3cd118142ef09daf28a
+        sha1="2a7e47da654546f9457deb6132364f1bf33a1857">
+        <dex dex="C:\Phelp_v1_android\mobile\build\intermediates\pre-dexed\debug\classes-f7065f3dc2ef949d9dcaabd6ea9135926a3c2d03.jar" />
     </item>
     <item
-        jar="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\8.1.0\jars\classes.jar"
+        jar="C:\Phelp_v1_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="95758a2905669affbffc5ddd262921d375674fad">
+        <dex dex="C:\Phelp_v1_android\mobile\build\intermediates\pre-dexed\debug\classes-542c650c64ae9f362a127fff236600a6fb0d4158.jar" />
+    </item>
+    <item
+        jar="C:\Phelp_v1_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d61920aba361832a9545a43fa8c9453eb02f18f7">
+        <dex dex="C:\Phelp_v1_android\mobile\build\intermediates\pre-dexed\debug\classes-3d286fae737bd069793920177ce0f6580d2cea9f.jar" />
+    </item>
+    <item
+        jar="C:\Phelp_v1_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\8.1.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="3178362320bcf51228835b60ff978efadfd1f783">
-        <dex dex="D:\Workspaces\Phelp\ANDROID\Phelp_android\mobile\build\intermediates\pre-dexed\debug\classes-0efee2e842f2a6ece7e98a8d5df970f3386ca3b8.jar" />
+        <dex dex="C:\Phelp_v1_android\mobile\build\intermediates\pre-dexed\debug\classes-d450aab431ee512fd0ab9b605aa4becbcb50ef01.jar" />
     </item>
     <item
-        jar="C:\PhelpRepo\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.1.0\jars\classes.jar"
+        jar="C:\Phelp_v1_android\mobile\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="3aed37c38c56679602255dd72ef356da5d327cda">
-        <dex dex="C:\PhelpRepo\mobile\build\intermediates\pre-dexed\debug\classes-9a7af9b321f8493e028a7422488be559c1f8123e.jar" />
+        sha1="dcf8c83c3dead00a6c4fe313e95f7aaca20dc641">
+        <dex dex="C:\Phelp_v1_android\mobile\build\intermediates\pre-dexed\debug\classes-a079798ebedeaf67cd91e36d8745fecce0cb9995.jar" />
     </item>
     <item
-        jar="C:\PhelpRepo\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\8.1.0\jars\classes.jar"
+        jar="C:\Phelp_v1_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d93480da1d303122ee67dc3bc23e6297bdef9951">
+        <dex dex="C:\Phelp_v1_android\mobile\build\intermediates\pre-dexed\debug\classes-5c419fdaf50ea87f0877e604091d4cd2a42576de.jar" />
+    </item>
+    <item
+        jar="C:\Phelp_v1_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\8.1.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="97f3b099801a9ad9d70e835b9125273e986eb68d">
-        <dex dex="C:\PhelpRepo\mobile\build\intermediates\pre-dexed\debug\classes-786b2b9448642cc40b65a586300aa471ef544442.jar" />
+        <dex dex="C:\Phelp_v1_android\mobile\build\intermediates\pre-dexed\debug\classes-6f1f6d91554fb2e25d9cdb950d9d66756cbc490d.jar" />
     </item>
     <item
-        jar="C:\PhelpAndroid\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="3b05c18f60969ecc2ba49c0409c4b96be2d9cb0c">
-        <dex dex="C:\PhelpAndroid\mobile\build\intermediates\pre-dexed\debug\classes-48286115a985645c53c98261ab268d5f36ce8a7b.jar" />
-    </item>
-    <item
-        jar="C:\PhelpAndroid\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\jars\classes.jar"
+        jar="C:\Phelp_v1_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
-        <dex dex="C:\PhelpAndroid\mobile\build\intermediates\pre-dexed\debug\classes-6965e5161c2488f6e02fe528ef80744b03bd2cf6.jar" />
+        <dex dex="C:\Phelp_v1_android\mobile\build\intermediates\pre-dexed\debug\classes-02dc21617103745a3e8ce07258e49593abdb30c2.jar" />
     </item>
     <item
-        jar="C:\PhelpAndroid\mobile\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jar="C:\Phelp_v1_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="325788a04b436a0bccbc5b4c54cf0f12ebdcbd2d">
+        <dex dex="C:\Phelp_v1_android\mobile\build\intermediates\pre-dexed\debug\classes-8bcd36a3ebd25f7e1b42b948906d58246d27bff7.jar" />
+    </item>
+    <item
+        jar="C:\Phelp_v1_android\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="041d93cf0533591c29d1d7263b2fa114dbfb20bd">
+        <dex dex="C:\Phelp_v1_android\mobile\build\intermediates\pre-dexed\debug\classes-0588ea371292a8150dddbe9cfa1bdec36e8546ff.jar" />
+    </item>
+    <item
+        jar="C:\Phelp_v1_android\mobile\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="C:\PhelpAndroid\mobile\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-ead07d19dbea8b04f5aef42cdcb7072d55cd3a4b.jar" />
-    </item>
-    <item
-        jar="C:\PhelpAndroid\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="997773777cf3904c11d6764fe3b7668538220e49">
-        <dex dex="C:\PhelpAndroid\mobile\build\intermediates\pre-dexed\debug\classes-e026ec7fad2f0bb5eb61f23b1afc63975bbd8a7b.jar" />
+        <dex dex="C:\Phelp_v1_android\mobile\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-c5d298c7bb67c6d1622b3868544359970aff8bb7.jar" />
     </item>
 
 </items>
