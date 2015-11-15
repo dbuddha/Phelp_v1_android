@@ -10,14 +10,19 @@ import com.mkbz.phelp.model.Model;
  * Created by MARCELO on 14-11-2015.
  */
 
-public abstract class ModelDataSource<T extends Model> extends DataSource<Model> {
+public class ModelDataSource<T extends Model> extends DataSource<Model> {
 
-    protected String tableName;
-    protected String idName;
+    protected final String tableName;
+    protected final String idName;
+    private final T clazz;
 
-    public ModelDataSource(Context context){
+    public ModelDataSource(Context context,String tableName,String idName,T clazz){
         super(context);
+        this.tableName=tableName;
+        this.idName=idName;
+        this.clazz = clazz;
     }
+
 
     @Override
     protected String getTableName() {
@@ -36,14 +41,16 @@ public abstract class ModelDataSource<T extends Model> extends DataSource<Model>
 
     @Override
     protected long getIdFrom(Model m) {
-        //return m.getId();
-        return 0;
+        return m.getId();
     }
-
 
     @Override
     protected ContentValues getValues(Model m) {
-        //return m.getContentValues();
-        return null;
+        return m.getContentValues();
+    }
+
+    @Override
+    protected T cursorToT(Cursor c) {
+        return clazz.createFromCursor(c);
     }
 }
