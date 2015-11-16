@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter;
 import com.mkbz.phelp.datasource.ModelDataSource;
 import com.mkbz.phelp.model.USSD;
 
-public class USSDListActivity extends ListFragment {
+public class USSDList extends ListFragment {
     private ModelDataSource<USSD> datasource;
 
     @Override

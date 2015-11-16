@@ -4,18 +4,14 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.ListFragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 
 import java.util.Locale;
 
@@ -129,7 +125,7 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
      */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-        private Fragment[] fragments={new USSDListActivity(),new USSDListActivity(),new USSDListActivity()};
+        private Fragment[] fragments={new USSDList(),new EmergencyList(),new USSDList()};
 
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);

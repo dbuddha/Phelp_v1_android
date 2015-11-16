@@ -37,8 +37,7 @@ public abstract class DataSource<T> {
 
     protected abstract T cursorToT(Cursor c);
 
-    //new ContentValues();
-    // values.put(PhelpDbHelper.COLUMN_COMMENT, USSD.java);
+    
     protected abstract ContentValues getValues(T t);
 
 
