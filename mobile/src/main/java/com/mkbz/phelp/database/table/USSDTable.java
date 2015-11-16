@@ -11,7 +11,6 @@ public class USSDTable implements Table {
 
 
 
-    private static final String DEBUG_TAG = "USSDTable";
     public static final String SQL_CREATE_TABLE =
         CREATE_TABLE + USSDEntry.TABLE_NAME + " (" +
                 USSDEntry.ID + INTEGER_TYPE + COMMA_SEP +
@@ -37,9 +36,6 @@ public class USSDTable implements Table {
     }
 
 
-    public USSDTable() {
-
-    }
 
     protected static abstract class USSDEntry implements BaseColumns {
         public static final String TABLE_NAME = "ussd";
