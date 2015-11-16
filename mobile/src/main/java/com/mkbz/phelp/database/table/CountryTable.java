@@ -1,8 +1,5 @@
 package com.mkbz.phelp.database.table;
 
-import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
-
 import com.mkbz.phelp.database.Table;
 
 /**

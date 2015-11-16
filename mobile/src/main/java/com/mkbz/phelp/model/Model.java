@@ -9,6 +9,8 @@ import android.database.Cursor;
 public abstract class Model {
 
 
+    public static final String ID = "id" ;
+
     protected long id;
 
     public long getId() {
@@ -17,5 +19,8 @@ public abstract class Model {
 
     public abstract ContentValues getContentValues();
 
+    public abstract String[] getAllColumns() ;
+
     public abstract <T extends Model> T createFromCursor(Cursor c);
+
 }

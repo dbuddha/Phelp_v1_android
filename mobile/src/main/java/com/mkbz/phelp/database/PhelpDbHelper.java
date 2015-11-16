@@ -11,13 +11,13 @@ import com.mkbz.phelp.database.table.TableList;
  */
 public class PhelpDbHelper extends SQLiteOpenHelper {
 
-    private final static String DATABASE_NAME="phelp_mkbz.db";
-    private final static int DATABASE_VERSION=1;
+    private final static String DATABASE_NAME = "phelp_mkbz.db";
+    private final static int DATABASE_VERSION = 1;
     private final TableList tables;
 
-    public PhelpDbHelper(Context context){
+    public PhelpDbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
-        this.tables=new TableList();
+        this.tables = new TableList();
     }
 
     @Override
@@ -27,6 +27,6 @@ public class PhelpDbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        tables.onUpgrade(db,oldVersion,newVersion);
+        tables.onUpgrade(db, oldVersion, newVersion);
     }
 }

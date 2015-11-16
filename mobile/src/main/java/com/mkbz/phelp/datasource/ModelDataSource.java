@@ -10,19 +10,23 @@ import com.mkbz.phelp.model.Model;
  * Created by MARCELO on 14-11-2015.
  */
 
-public class ModelDataSource<T extends Model> extends DataSource<Model> {
+public class ModelDataSource<T extends Model> extends DataSource<T> {
 
     protected final String tableName;
     protected final String idName;
     private final T clazz;
 
-    public ModelDataSource(Context context,String tableName,String idName,T clazz){
+    public ModelDataSource(Context context, String tableName, String idName, T clazz) {
         super(context);
-        this.tableName=tableName;
-        this.idName=idName;
+        this.tableName = tableName;
+        this.idName = idName;
         this.clazz = clazz;
+        this.allColumns = getAllColumns();
     }
 
+    private String[] getAllColumns() {
+        return clazz.getAllColumns();
+    }
 
     @Override
     protected String getTableName() {
