@@ -3,11 +3,12 @@ package com.mkbz.phelp.model;
 import android.content.ContentValues;
 import android.database.Cursor;
 
+import com.mkbz.phelp.database.table.EmergencyTable;
+
 public class Emergency extends Model {
 
-    public Emergency() {
 
-    }
+    public static final String TABLE = "emergency" ;
 
     public Emergency(Cursor c) {
 
@@ -19,10 +20,12 @@ public class Emergency extends Model {
         return null;
     }
 
+
     @Override
     public String[] getAllColumns() {
-        return new String[0];
+        return EmergencyTable.COLUMNS;
     }
+
     @Override
     public Emergency createFromCursor(Cursor c) {
         return new Emergency(c);
@@ -36,7 +39,7 @@ public class Emergency extends Model {
     // Will be used by the ArrayAdapter in the ListView
     @Override
     public String toString() {
-        return "emergency";
+        return TABLE;
     }
 
 }

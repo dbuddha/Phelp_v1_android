@@ -1,6 +1,7 @@
 package com.mkbz.phelp.model;
 
 import android.content.ContentValues;
+import android.content.Context;
 import android.database.Cursor;
 
 import com.mkbz.phelp.database.table.USSDTable;
@@ -9,18 +10,23 @@ public class USSD extends Model {
 
     public static final String TABLE = "ussd" ;
 
-    public USSD() {
-
-    }
+    private String title;
+    private String description;
+    private String code;
 
     public USSD(Cursor c) {
-
+        //TODO: falta fazer load apartir de cursor
     }
-
 
     @Override
     public ContentValues getContentValues() {
-        return null;
+        ContentValues cv = new ContentValues();
+
+        cv.put("title",title);
+        cv.put("description",description);
+        cv.put("code",code);
+
+        return cv;
     }
 
     @Override
@@ -41,7 +47,30 @@ public class USSD extends Model {
     // Will be used by the ArrayAdapter in the ListView
     @Override
     public String toString() {
-        return "ussd";
+        return TABLE;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
 }

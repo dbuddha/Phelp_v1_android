@@ -9,8 +9,7 @@ import com.mkbz.phelp.database.Table;
  */
 public class TableList {
 
-    /*private static final Table[] tables = {new CountryTable(), new OperatorTable(), new USSDTable(), new EmergencyTable()};*/
-    private static final Table[] tables = { new USSDTable()};
+    private static final Table[] tables = {new CountryTable(), new OperatorTable(), new USSDTable(), new EmergencyTable()};
 
 
     public void onCreate(SQLiteDatabase db) {

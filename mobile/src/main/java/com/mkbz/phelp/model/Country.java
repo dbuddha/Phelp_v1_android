@@ -3,11 +3,16 @@ package com.mkbz.phelp.model;
 import android.content.ContentValues;
 import android.database.Cursor;
 
+import com.mkbz.phelp.database.table.CountryTable;
+
 public class Country extends Model {
 
-    public Country() {
 
-    }
+    public static final String TABLE = "country" ;
+
+    private String code;
+    private String code2;
+    private String name;
 
     public Country(Cursor c) {
 
@@ -19,11 +24,11 @@ public class Country extends Model {
         return null;
     }
 
+
     @Override
     public String[] getAllColumns() {
-        return new String[0];
+        return CountryTable.COLUMNS;
     }
-
     @Override
     public Country createFromCursor(Cursor c) {
         return new Country(c);
@@ -37,7 +42,30 @@ public class Country extends Model {
     // Will be used by the ArrayAdapter in the ListView
     @Override
     public String toString() {
-        return "country";
+        return TABLE;
     }
 
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public String getCode2() {
+        return code2;
+    }
+
+    public void setCode2(String code2) {
+        this.code2 = code2;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
