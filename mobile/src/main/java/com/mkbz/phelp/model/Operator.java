@@ -10,6 +10,7 @@ public class Operator extends Model {
 
     public static final String TABLE = "operator" ;
 
+    public Operator(){};
     public Operator(Cursor c) {
 
     }

@@ -10,6 +10,9 @@ public class Emergency extends Model {
 
     public static final String TABLE = "emergency" ;
 
+    public Emergency() {
+
+    }
     public Emergency(Cursor c) {
 
     }

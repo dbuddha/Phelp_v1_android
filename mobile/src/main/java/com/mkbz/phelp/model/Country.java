@@ -14,6 +14,9 @@ public class Country extends Model {
     private String code2;
     private String name;
 
+    public Country() {
+
+    }
     public Country(Cursor c) {
 
     }

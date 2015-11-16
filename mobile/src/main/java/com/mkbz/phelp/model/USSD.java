@@ -14,6 +14,8 @@ public class USSD extends Model {
     private String description;
     private String code;
 
+    public USSD(){};
+
     public USSD(Cursor c) {
         //TODO: falta fazer load apartir de cursor
     }
