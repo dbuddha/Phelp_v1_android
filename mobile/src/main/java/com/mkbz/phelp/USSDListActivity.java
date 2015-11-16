@@ -1,12 +1,9 @@
 package com.mkbz.phelp;
 
 import java.util.List;
-import java.util.Random;
-
-import android.app.ListActivity;
-import android.app.ListFragment;
 import android.os.Bundle;
-import android.view.View;
+import android.support.v4.app.ListFragment;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 
 import com.mkbz.phelp.datasource.ModelDataSource;
@@ -24,10 +21,12 @@ public class USSDListActivity extends ListFragment {
 
         List<USSD> values =  datasource.getAll();
 
+        values.add(new USSD());
         // use the SimpleCursorAdapter to show the
         // elements in a ListView
         ArrayAdapter<USSD> adapter = new ArrayAdapter<USSD>(getActivity(),android.R.layout.simple_list_item_1, values);
         setListAdapter(adapter);
+        Log.d("ussd","activity ussd created");
     }
 
    /* // Will be called via the onClick attribute
@@ -59,12 +58,15 @@ public class USSDListActivity extends ListFragment {
     public void onResume() {
         datasource.open();
         super.onResume();
+        Log.d("ussd", "activity ussd resumed");
     }
 
     @Override
     public void onPause() {
         datasource.close();
         super.onPause();
+
+        Log.d("ussd", "activity ussd paused");
     }
 
 } 

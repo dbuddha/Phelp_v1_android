@@ -19,7 +19,7 @@ public class USSDTable implements Table {
                 USSDEntry.DESCRIPTION + TEXT_TYPE + COMMA_SEP +
                 USSDEntry.CODE + TEXT_TYPE + COMMA_SEP +
                 PRIMARY_KEY + "(" +
-                USSDEntry.ID + COMMA_SEP +
+                USSDEntry.ID  +
                 ") )";
     public static final String SQL_DROP_TABLE =
             "DROP TABLE IF EXISTS " + USSDEntry.TABLE_NAME;
