@@ -120,30 +120,33 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
 
     @Override
     public void onTabReselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
+
     }
 
-            /**
-             * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
-             * one of the sections/tabs/pages.
-             */
-            public class SectionsPagerAdapter extends FragmentPagerAdapter {
+    /**
+     * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
+     * one of the sections/tabs/pages.
+     */
+    public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-                public SectionsPagerAdapter(FragmentManager fm) {
-                    super(fm);
-                }
+        private Fragment[] fragments={new USSDListActivity(),new USSDListActivity(),new USSDListActivity()};
 
-                @Override
-                public Fragment getItem(int position) {
-                    // getItem is called to instantiate the fragment for the given page.
-                    // Return a PlaceholderFragment (defined as a static inner class below).
+        public SectionsPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
 
-                    return new USSDListActivity();
-                }
+        @Override
+        public Fragment getItem(int position) {
+            // getItem is called to instantiate the fragment for the given page.
+            // Return a PlaceholderFragment (defined as a static inner class below).
 
-                @Override
-                public int getCount() {
-                    // Show 3 total pages.
-                    return 3;
+            return fragments[position];
+        }
+
+        @Override
+        public int getCount() {
+            // Show 3 total pages.
+            return 3;
         }
 
         @Override
