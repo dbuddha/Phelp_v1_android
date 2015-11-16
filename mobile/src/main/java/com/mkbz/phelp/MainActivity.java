@@ -92,7 +92,12 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        /* getMenuInflater().inflate(R.menu.menu_main, menu);
+        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        SearchView searchView = (SearchView) menu.findItem(R.id.list).getActionView();
+        // Assumes current activity is the searchable activity
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+        searchView.setIconifiedByDefault(false); // Do not iconify the widget; expand it by default*/
 
         return true;
     }
@@ -109,8 +114,6 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
             return true;
         }
         if (id == R.id.action_search) {
-            Intent i = new Intent(this, SearchActivity.class);
-            startActivity(i);
             return true;
         }
 
