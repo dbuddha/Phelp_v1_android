@@ -14,4 +14,6 @@
     <string name="search_hint">Search All</string>
     <string name="app_label">Phelp</string>
     <string name="title_activity_search">Search</string>
+    <string name="select_country_string">Select Country</string>
+    <string name="select_operator_string">Select Operator</string>
 </resources>

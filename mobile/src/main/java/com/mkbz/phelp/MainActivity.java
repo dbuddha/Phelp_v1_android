@@ -1,5 +1,6 @@
 package com.mkbz.phelp;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -96,10 +97,8 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.select_country) {
         }
-
         return super.onOptionsItemSelected(item);
     }
 
