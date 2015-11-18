@@ -3,6 +3,7 @@ package com.mkbz.phelp;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -16,7 +17,7 @@ import android.view.MenuItem;
 
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity implements ActionBar.TabListener {
+public class MainActivity extends AppCompatActivity implements ActionBar.TabListener,CountryPickerDialogFragment.OnFragmentInteractionListener {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -98,6 +99,8 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.select_country) {
+                 CountryPickerDialogFragment picker = CountryPickerDialogFragment.newInstance();
+                 picker.show(getSupportFragmentManager(), "COUNTRY_PICKER");
         }
         return super.onOptionsItemSelected(item);
     }
@@ -116,6 +119,11 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
     @Override
     public void onTabReselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
 
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+        return;
     }
 
     /**
