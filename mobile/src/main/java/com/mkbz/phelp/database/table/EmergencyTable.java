@@ -7,6 +7,9 @@ import com.mkbz.phelp.database.Table;
 /**
  * Created by MARCELO on 15-11-2015.
  */
+
+//TODO: sql create, columns and entry are wrong
+
 public class EmergencyTable implements Table {
 
     public static final String SQL_CREATE_TABLE =

@@ -38,6 +38,7 @@ public class CountryPickerDialogFragment extends DialogFragment {
 
     public CountryPickerDialogFragment() {
         // Required empty public constructor
+        super();
     }
 
     @Override
