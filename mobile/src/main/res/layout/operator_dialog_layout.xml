@@ -12,7 +12,7 @@
     <fragment
         android:layout_width="match_parent"
         android:layout_height="411dp"
-        android:name="com.mkbz.phelp.lists.CountryList"
+        android:name="com.mkbz.phelp.lists.OperatorList"
         android:id="@+id/fragment_list_dialog"
         android:layout_gravity="bottom"
         android:layout_marginLeft="10dp"

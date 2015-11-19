@@ -1,6 +1,5 @@
 package com.mkbz.phelp;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
@@ -15,9 +14,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.mkbz.phelp.lists.EmergencyList;
+import com.mkbz.phelp.lists.USSDList;
+
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity implements ActionBar.TabListener,CountryPickerDialogFragment.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements ActionBar.TabListener,CountryPickerDialogFragment.OnFragmentInteractionListener,OperatorPickerDialogFragment.OnFragmentInteractionListener {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -99,8 +101,12 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.select_country) {
-                 CountryPickerDialogFragment picker = CountryPickerDialogFragment.newInstance();
-                 picker.show(getSupportFragmentManager(), "COUNTRY_PICKER");
+             CountryPickerDialogFragment picker = CountryPickerDialogFragment.newInstance();
+             picker.show(getSupportFragmentManager(), "COUNTRY_PICKER");
+        }
+        if (id == R.id.select_operator) {
+            OperatorPickerDialogFragment picker = OperatorPickerDialogFragment.newInstance();
+            picker.show(getSupportFragmentManager(), "OPERATOR_PICKER");
         }
         return super.onOptionsItemSelected(item);
     }

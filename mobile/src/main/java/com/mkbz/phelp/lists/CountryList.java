@@ -1,4 +1,4 @@
-package com.mkbz.phelp;
+package com.mkbz.phelp.lists;
 
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
