@@ -1,8 +1,7 @@
 package com.mkbz.phelp;
-
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,19 +10,19 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBar.*;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-
+import com.mkbz.phelp.lists.*;
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity implements ActionBar.TabListener,CountryPickerDialogFragment.OnFragmentInteractionListener {
-
-public class MainActivity extends AppCompatActivity implements TabListener,OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements TabListener,CountryPickerDialogFragment.OnFragmentInteractionListener,OperatorPickerDialogFragment.OnFragmentInteractionListener {
 
     public static final String COUNTRY_PICKER = "COUNTRY_PICKER";
+    public static final String OPERATOR_PICKER = "OPERATOR_PICKER";
     public static final String COLOR_BACKGROUND_PHELP = "#BF392B";
-    private static final ColorDrawable background_color = new ColorDrawable(Color.parseColor(COLOR_BACKGROUND_PHELP));
+    private static final Drawable background_color = new ColorDrawable(Color.parseColor(COLOR_BACKGROUND_PHELP));
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
@@ -46,13 +45,15 @@ public class MainActivity extends AppCompatActivity implements TabListener,OnFra
 
         // Set up the action bar.
         final ActionBar actionBar = getSupportActionBar();
-        actionBar.setNavigationMode(NAVIGATION_MODE_TABS);
+        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
 
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setIcon(R.mipmap.ic_launcher);
         actionBar.setBackgroundDrawable(background_color);
-        actionBar.setStackedBackgroundDrawable(background_color);
+        //nao me perguntes porque mas se nao tiver aqui o new não fica com a cor na de cima
+        actionBar.setStackedBackgroundDrawable(new ColorDrawable(Color.parseColor(COLOR_BACKGROUND_PHELP)));
 
         // Create the adapter.java that will return a fragment for each of the three
         // primary sections of the activity.
@@ -105,11 +106,11 @@ public class MainActivity extends AppCompatActivity implements TabListener,OnFra
         //noinspection SimplifiableIfStatement
         if (id == R.id.select_country) {
              CountryPickerDialogFragment picker = CountryPickerDialogFragment.newInstance();
-             picker.show(getSupportFragmentManager(), "COUNTRY_PICKER");
+             picker.show(getSupportFragmentManager(), COUNTRY_PICKER);
         }
         if (id == R.id.select_operator) {
             OperatorPickerDialogFragment picker = OperatorPickerDialogFragment.newInstance();
-            picker.show(getSupportFragmentManager(), "OPERATOR_PICKER");
+            picker.show(getSupportFragmentManager(), OPERATOR_PICKER);
         }
         return super.onOptionsItemSelected(item);
     }
