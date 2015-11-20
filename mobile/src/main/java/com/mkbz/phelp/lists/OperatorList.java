@@ -1,10 +1,14 @@
 package com.mkbz.phelp.lists;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
+import com.mkbz.phelp.MainActivity;
 import com.mkbz.phelp.datasource.ModelDataSource;
 import com.mkbz.phelp.model.Country;
 import com.mkbz.phelp.model.Operator;
@@ -34,7 +38,14 @@ public class OperatorList extends ListFragment {
         setListAdapter(adapter);
         Log.d("Country", "activity Operator created");
     }
-
+    @Override
+    public void onListItemClick(ListView l, View v, int position, long id){
+        SharedPreferences.Editor editor = MainActivity.getSharedPreferences().edit();
+        editor.putLong("operator_id", id);
+        editor.commit();
+        Long aux = MainActivity.getSharedPreferences().getLong("operator_id", 0);
+        Log.d("Operator", aux.toString());
+    }
     @Override
     public void onResume() {
         datasource.open();

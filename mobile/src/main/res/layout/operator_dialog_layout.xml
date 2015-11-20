@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="411dp"
         android:name="com.mkbz.phelp.lists.OperatorList"
-        android:id="@+id/fragment_list_dialog"
+        android:id="@+id/fragment_list_operator"
         android:layout_gravity="bottom"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

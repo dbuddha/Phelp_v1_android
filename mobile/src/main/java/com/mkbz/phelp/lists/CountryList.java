@@ -1,10 +1,14 @@
 package com.mkbz.phelp.lists;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
+import com.mkbz.phelp.MainActivity;
 import com.mkbz.phelp.datasource.ModelDataSource;
 import com.mkbz.phelp.model.Country;
 
@@ -33,7 +37,14 @@ import java.util.List;
             setListAdapter(adapter);
             Log.d("Country", "activity Country created");
         }
-
+        @Override
+        public void onListItemClick(ListView l, View v, int position, long id){
+            SharedPreferences.Editor editor = MainActivity.getSharedPreferences().edit();
+            editor.putLong("country_id", id);
+            editor.commit();
+            Long aux = MainActivity.getSharedPreferences().getLong("country_id", 0);
+            Log.d("Country", aux.toString());
+        }
         @Override
         public void onResume() {
             datasource.open();
@@ -45,7 +56,6 @@ import java.util.List;
         public void onPause() {
             datasource.close();
             super.onPause();
-
             Log.d("Country", "activity Country paused");
         }
 

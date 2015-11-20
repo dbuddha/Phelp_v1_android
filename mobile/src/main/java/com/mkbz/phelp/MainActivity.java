@@ -1,4 +1,6 @@
 package com.mkbz.phelp;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
@@ -14,15 +16,28 @@ import android.support.v7.app.ActionBar.*;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+
 import com.mkbz.phelp.lists.*;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity implements TabListener,CountryPickerDialogFragment.OnFragmentInteractionListener,OperatorPickerDialogFragment.OnFragmentInteractionListener {
-
+    public static final String MyPREFERENCES = "myprefs";
     public static final String COUNTRY_PICKER = "COUNTRY_PICKER";
     public static final String OPERATOR_PICKER = "OPERATOR_PICKER";
     public static final String COLOR_BACKGROUND_PHELP = "#BF392B";
+
     private static final Drawable background_color = new ColorDrawable(Color.parseColor(COLOR_BACKGROUND_PHELP));
+
+    public static SharedPreferences getSharedPreferences() {
+        return sharedPreferences;
+    }
+
+    public static void setSharedPreferences(SharedPreferences sharedPreferences) {
+        MainActivity.sharedPreferences = sharedPreferences;
+    }
+
+    private static SharedPreferences sharedPreferences;
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
@@ -43,6 +58,7 @@ public class MainActivity extends AppCompatActivity implements TabListener,Count
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        sharedPreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
         // Set up the action bar.
         final ActionBar actionBar = getSupportActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
@@ -96,6 +112,7 @@ public class MainActivity extends AppCompatActivity implements TabListener,Count
         return true;
     }
 
+    public static View view;
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will

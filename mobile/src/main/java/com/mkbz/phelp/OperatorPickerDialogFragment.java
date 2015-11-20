@@ -42,21 +42,20 @@ public class OperatorPickerDialogFragment extends DialogFragment {
     }
 
 
-    private static View view;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        if (view != null) {
-            ViewGroup parent = (ViewGroup) view.getParent();
+        if (MainActivity.view != null) {
+            ViewGroup parent = (ViewGroup) MainActivity.view.getParent();
             if (parent != null)
-                parent.removeView(view);
+                parent.removeView(MainActivity.view);
         }
         try {
             getDialog().setTitle("Select Network Operator");
-            view = inflater.inflate(R.layout.operator_dialog_layout, container, false);
+            MainActivity.view = inflater.inflate(R.layout.operator_dialog_layout, container, false);
         } catch (InflateException e) {
         /* map is already there, just return view as it is */
         }
-        return view;
+        return MainActivity.view;
     }
    /* @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
