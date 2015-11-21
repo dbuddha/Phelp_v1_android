@@ -34,7 +34,7 @@ import java.util.List;
             values.add(new Country());
             // use the SimpleCursorAdapter to show the
             // elements in a ListView
-            ArrayAdapter<Country> adapter = new ArrayAdapter<Country>(getActivity(), R.layout.fragment_list_country_item, values);
+            ArrayAdapter<Country> adapter = new ArrayAdapter<Country>(getActivity(), android.R.layout.simple_list_item_1, values);
             setListAdapter(adapter);
             Log.d("Country", "activity Country created");
         }
