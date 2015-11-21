@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.mkbz.phelp.MainActivity;
+import com.mkbz.phelp.R;
 import com.mkbz.phelp.datasource.ModelDataSource;
 import com.mkbz.phelp.model.Country;
 
@@ -33,7 +34,7 @@ import java.util.List;
             values.add(new Country());
             // use the SimpleCursorAdapter to show the
             // elements in a ListView
-            ArrayAdapter<Country> adapter = new ArrayAdapter<Country>(getActivity(),android.R.layout.simple_list_item_1, values);
+            ArrayAdapter<Country> adapter = new ArrayAdapter<Country>(getActivity(), R.layout.fragment_list_country_item, values);
             setListAdapter(adapter);
             Log.d("Country", "activity Country created");
         }

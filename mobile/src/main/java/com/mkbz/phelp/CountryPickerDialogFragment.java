@@ -5,10 +5,19 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.support.v4.app.DialogFragment;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.InflateException;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ListView;
+
+import com.mkbz.phelp.model.Country;
+
+import java.util.Comparator;
+import java.util.Locale;
 
 
 /**
@@ -19,7 +28,7 @@ import android.view.ViewGroup;
  * Use the {@link CountryPickerDialogFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class CountryPickerDialogFragment extends DialogFragment {
+public class CountryPickerDialogFragment extends DialogFragment  {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private OnFragmentInteractionListener mListener;
@@ -47,8 +56,37 @@ public class CountryPickerDialogFragment extends DialogFragment {
 
     }
 
+    private void search(String text) {
+        return;
+    }
+
+    /**
+     * Support sorting the countries list
+     */
+    private ListView countryListView;
+    private EditText searchEditText;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        searchEditText = (EditText) container.findViewById(R.id.country_picker_search);
+        countryListView = (ListView) container.findViewById(R.id.fragment_list_country);
+
+        searchEditText.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before,
+                                      int count) {
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count,
+                                          int after) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                search(s.toString());
+            }
+        });
         if (MainActivity.view != null) {
             ViewGroup parent = (ViewGroup) MainActivity.view.getParent();
             if (parent != null)
