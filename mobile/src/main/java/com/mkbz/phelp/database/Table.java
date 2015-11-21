@@ -19,4 +19,6 @@ public interface Table {
     String getCreate();
 
     String getDelete();
+
+    String getPersistentData();
 }

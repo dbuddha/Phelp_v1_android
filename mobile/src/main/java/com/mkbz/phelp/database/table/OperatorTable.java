@@ -36,6 +36,10 @@ public class OperatorTable implements Table {
         return SQL_DROP_TABLE;
     }
 
+    @Override
+    public String getPersistentData() {
+        return "";
+    }
 
 
     protected static abstract class OperatorEntry implements BaseColumns {

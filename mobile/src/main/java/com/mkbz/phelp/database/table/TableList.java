@@ -15,6 +15,7 @@ public class TableList {
     public void onCreate(SQLiteDatabase db) {
         for (int i = 0; i < tables.length; ++i) {
             db.execSQL(tables[i].getCreate());
+            db.execSQL(tables[i].getPersistentData());
         }
     }
 
