@@ -2,6 +2,7 @@ package com.mkbz.phelp.model;
 
 import android.content.ContentValues;
 import android.database.Cursor;
+import android.util.Log;
 
 import com.mkbz.phelp.database.table.CountryTable;
 
@@ -18,6 +19,7 @@ public class Country extends Model {
 
     }
     public Country(Cursor c) {
+        //Log.d("countrys:", c.getString(0) + c.getString(1));
         this.setId(c.getLong(0));
         this.setCode(c.getString(1));
         this.setCode2(c.getString(2));
