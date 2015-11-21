@@ -248,7 +248,7 @@ public class USSDTable implements Table {
             "  ('EH','ESH','Western Sahara'),\n" +
             "  ('YE','YEM','Yemen'),\n" +
             "  ('ZM','ZMB','Zambia'),\n" +
-            "  ('ZW','ZWE','Zimbabwe'),";
+            "  ('ZW','ZWE','Zimbabwe')";
 
     public static final String SQL_CREATE_TABLE =
         CREATE_TABLE + USSDEntry.TABLE_NAME + " (" +
