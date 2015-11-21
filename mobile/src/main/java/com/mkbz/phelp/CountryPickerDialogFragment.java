@@ -67,10 +67,10 @@ public class CountryPickerDialogFragment extends DialogFragment  {
     private EditText searchEditText;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        searchEditText = (EditText) container.findViewById(R.id.country_picker_search);
-        countryListView = (ListView) container.findViewById(R.id.fragment_list_country);
+        //searchEditText = (EditText) container.findViewById(R.id.country_picker_search);
+        //countryListView = (ListView) container.findViewById(R.id.fragment_list_country);
 
-        searchEditText.addTextChangedListener(new TextWatcher() {
+       /* searchEditText.addTextChangedListener(new TextWatcher() {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before,
@@ -86,7 +86,7 @@ public class CountryPickerDialogFragment extends DialogFragment  {
             public void afterTextChanged(Editable s) {
                 search(s.toString());
             }
-        });
+        });*/
         if (MainActivity.view != null) {
             ViewGroup parent = (ViewGroup) MainActivity.view.getParent();
             if (parent != null)
