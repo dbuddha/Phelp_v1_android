@@ -2505,5 +2505,5 @@ public class OperatorTable implements Table {
             "\n" +
             "  ('33,'Smile','ug'),\n" +
             "\n" +
-            "  ('44,'K2','ug'),";
+            "  ('44,'K2','ug')";
 }
