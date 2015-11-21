@@ -1,10 +1,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:orientation="vertical" android:layout_height="match_parent" tools:context="com.mkbz.phelp.CountryPickerDialogFragment">
+    android:orientation="vertical" android:layout_height="match_parent" tools:context="com.mkbz.phelp.OperatorPickerDialogFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <EditText
-        android:id="@+id/country_picker_search"
+        android:id="@+id/operator_picker_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -13,11 +13,13 @@
     <fragment
         android:layout_width="match_parent"
         android:layout_height="411dp"
-        android:name="com.mkbz.phelp.lists.CountryList"
-        android:id="@+id/fragment_list_country"
+        android:name="com.mkbz.phelp.lists.OperatorList"
+        android:id="@+id/fragment_list_operator"
         android:layout_gravity="bottom"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
         tools:layout="@layout/abc_action_menu_layout" />
+
+
 </LinearLayout>
