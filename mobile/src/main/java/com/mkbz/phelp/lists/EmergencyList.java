@@ -18,7 +18,7 @@ public class EmergencyList extends ListFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        datasource = new ModelDataSource<Emergency>(getActivity(),Emergency.TABLE,Emergency.ID,new Emergency());
+        datasource = new ModelDataSource<>(getActivity(),Emergency.TABLE,Emergency.ID,new Emergency());
         datasource.open();
 
         List<Emergency> values =  datasource.getAll();

@@ -2,6 +2,7 @@ package com.mkbz.phelp.model;
 
 import android.content.ContentValues;
 import android.database.Cursor;
+import android.util.Log;
 
 import com.mkbz.phelp.database.table.CountryTable;
 
@@ -18,7 +19,11 @@ public class Country extends Model {
 
     }
     public Country(Cursor c) {
-
+        //Log.d("countrys:", c.getString(0) + c.getString(1));
+        this.setId(c.getLong(0));
+        this.setCode(c.getString(1));
+        this.setCode2(c.getString(2));
+        this.setName(c.getString(3));
     }
 
 
@@ -45,7 +50,7 @@ public class Country extends Model {
     // Will be used by the ArrayAdapter in the ListView
     @Override
     public String toString() {
-        return TABLE;
+        return name;
     }
 
     public String getCode() {

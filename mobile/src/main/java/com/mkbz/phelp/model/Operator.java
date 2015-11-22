@@ -10,9 +10,15 @@ public class Operator extends Model {
 
     public static final String TABLE = "operator" ;
 
+    private int network_code;
+    private String name;
+
+
     public Operator(){};
     public Operator(Cursor c) {
-
+        this.setId(c.getLong(0));
+        this.setNetwork_code(c.getInt(1));
+        this.setName(c.getString(2));
     }
 
 
@@ -40,6 +46,22 @@ public class Operator extends Model {
     // Will be used by the ArrayAdapter in the ListView
     @Override
     public String toString() {
-        return TABLE;
+        return name;
+    }
+
+    public int getNetwork_code() {
+        return network_code;
+    }
+
+    public void setNetwork_code(int network_code) {
+        this.network_code = network_code;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

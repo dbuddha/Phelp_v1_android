@@ -26,12 +26,12 @@ public class OperatorList extends ListFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        datasource = new ModelDataSource<Operator>(getActivity(), Operator.TABLE,Operator.ID,new Operator());
+        datasource = new ModelDataSource<>(getActivity(), Operator.TABLE,Operator.ID,new Operator());
         datasource.open();
 
         List<Operator> values =  datasource.getAll();
 
-        values.add(new Operator());
+        //values.add(new Operator());
         // use the SimpleCursorAdapter to show the
         // elements in a ListView
         ArrayAdapter<Operator> adapter = new ArrayAdapter<Operator>(getActivity(),android.R.layout.simple_list_item_1, values);
