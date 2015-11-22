@@ -63,30 +63,8 @@ public class CountryPickerDialogFragment extends DialogFragment  {
     /**
      * Support sorting the countries list
      */
-    private ListView countryListView;
-    private EditText searchEditText;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        searchEditText = (EditText) container.findViewById(R.id.country_picker_search);
-        countryListView = (ListView) container.findViewById(R.id.fragment_list_country);
-
-        searchEditText.addTextChangedListener(new TextWatcher() {
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before,
-                                      int count) {
-            }
-
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count,
-                                          int after) {
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                search(s.toString());
-            }
-        });
         if (MainActivity.view != null) {
             ViewGroup parent = (ViewGroup) MainActivity.view.getParent();
             if (parent != null)
