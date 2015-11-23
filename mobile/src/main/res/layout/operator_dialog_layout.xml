@@ -4,12 +4,13 @@
 
     <!-- TODO: Update blank fragment layout -->
     <EditText
+        android:colorAccent="#000000"
         android:id="@+id/operator_picker_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:hint="@string/search"
-        android:drawableLeft="@drawable/ic_action_search" />
+        android:drawableLeft="@drawable/ic_action_search_dark" />
     <fragment
         android:layout_width="match_parent"
         android:layout_height="411dp"
