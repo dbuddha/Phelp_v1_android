@@ -12,41 +12,16 @@ import com.mkbz.phelp.database.Table;
 
 public class EmergencyTable implements Table {
 
-    public static final String SQL_CREATE_TABLE =
-            CREATE_TABLE + EmergencyEntry.TABLE_NAME + " (" +
-                    EmergencyEntry.ID + INTEGER_TYPE + COMMA_SEP +
-                    EmergencyEntry.CODE + TEXT_TYPE + COMMA_SEP +
-                    EmergencyEntry.CODE2 + TEXT_TYPE + COMMA_SEP +
-                    EmergencyEntry.NAME + TEXT_TYPE + COMMA_SEP +
-                    PRIMARY_KEY + "(" +
-                    EmergencyEntry.ID  +
-                    ") )";
-    public static final String SQL_DROP_TABLE =
-            "DROP TABLE IF EXISTS " + EmergencyEntry.TABLE_NAME;
-
-    public static final String[] COLUMNS={EmergencyEntry.ID,EmergencyEntry.CODE,EmergencyEntry.CODE2,EmergencyEntry.NAME};
-
-    @Override
-    public String getCreate() {
-        return SQL_CREATE_TABLE;
-    }
-
-    @Override
-    public String getDelete() {
-        return SQL_DROP_TABLE;
-    }
-
-    @Override
-    public String getPersistentData() {
-        return "";
-    }
+    public static final String[] COLUMNS={EmergencyEntry.ID,EmergencyEntry.CODE,EmergencyEntry.TITLE,EmergencyEntry.DESCRIPTION,EmergencyEntry.COUNTRY};
 
 
     protected static abstract class EmergencyEntry implements BaseColumns {
         public static final String TABLE_NAME = "emergency";
         public static final String ID = "id";
         public static final String CODE = "code";
-        public static final String CODE2 = "code2";
-        public static final String NAME = "name";
+        public static final String TITLE = "title";
+        public static final String DESCRIPTION = "description";
+        public static final String COUNTRY = "country_id";
+
     }
 }

@@ -16,9 +16,4 @@ public interface Table {
     String FOREIGN_KEY = " FOREIGN KEY ( ";
     String REFERENCES = " ) REFERENCES ";
 
-    String getCreate();
-
-    String getDelete();
-
-    String getPersistentData();
 }

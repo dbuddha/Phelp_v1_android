@@ -10,9 +10,11 @@ public class USSD extends Model {
 
     public static final String TABLE = "ussd" ;
 
+    private String code;
     private String title;
     private String description;
-    private String code;
+    private String country;
+    private int operator;
 
     public USSD(){};
 
@@ -22,13 +24,7 @@ public class USSD extends Model {
 
     @Override
     public ContentValues getContentValues() {
-        ContentValues cv = new ContentValues();
-
-        cv.put("title",title);
-        cv.put("description",description);
-        cv.put("code",code);
-
-        return cv;
+        return null;
     }
 
     @Override

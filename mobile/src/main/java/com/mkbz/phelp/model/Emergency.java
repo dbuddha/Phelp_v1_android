@@ -9,6 +9,10 @@ public class Emergency extends Model {
 
 
     public static final String TABLE = "emergency" ;
+    private String code = "code";
+    private String title = "title";
+    private String description = "description";
+    private String country = "country_id";
 
     public Emergency() {
 
