@@ -63,6 +63,19 @@ public abstract class DataSource<T> {
         database.delete(getTableName(), getIdName() + " = " + id, null);
     }
 
+    public T get(long id){
+        T ret;
+        Cursor cursor = database.query(getTableName(),
+                allColumns, "id = ?", new String[]{String.valueOf(id)}, null, null, null);
+
+        cursor.moveToFirst();
+        ret = cursorToT(cursor);
+
+        // make sure to close the cursor
+        cursor.close();
+
+        return ret;
+    }
 
     public List<T> getAll() {
         List<T> list = new ArrayList<T>();
