@@ -43,6 +43,7 @@ public class OperatorList extends ListFragment {
         SharedPreferences.Editor editor = MainActivity.getSharedPreferences().edit();
         editor.putLong("operator_id", id);
         editor.commit();
+        datasource.get(id);
         Long aux = MainActivity.getSharedPreferences().getLong("operator_id", 0);
         Log.d("Operator", aux.toString());
     }
