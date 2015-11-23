@@ -62,7 +62,6 @@ public abstract class DataSource<T> {
         System.out.println(getDTName() + " deleted with id: " + id);
         database.delete(getTableName(), getIdName() + " = " + id, null);
     }
-
     public T get(long id){
         T ret;
         Cursor cursor = database.query(getTableName(),

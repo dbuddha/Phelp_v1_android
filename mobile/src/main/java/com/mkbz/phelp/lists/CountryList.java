@@ -43,9 +43,9 @@ import java.util.List;
             SharedPreferences.Editor editor = MainActivity.getSharedPreferences().edit();
             editor.putLong("country_id", id);
             editor.commit();
-            //datasource.get(id);
+            Country c = datasource.get(id);
             Long aux = MainActivity.getSharedPreferences().getLong("country_id", 0);
-            Log.d("Country", aux.toString());
+            Log.d("Country", aux + "-"+position +" -> " + id + " -> "+ c.toString());
         }
         @Override
         public void onResume() {
