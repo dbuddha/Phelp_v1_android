@@ -2,12 +2,10 @@ package com.mkbz.phelp.database.table;
 
 import android.provider.BaseColumns;
 
-import com.mkbz.phelp.database.Table;
-
 /**
  * Created by MARCELO on 15-11-2015.
  */
-public class CountryTable implements Table {
+public class CountryTable {
 
 
     public static final String[] COLUMNS={CountryEntry.ID,CountryEntry.CODE,CountryEntry.CODE2,CountryEntry.NAME};

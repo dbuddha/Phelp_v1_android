@@ -2,12 +2,10 @@ package com.mkbz.phelp.database.table;
 
 import android.provider.BaseColumns;
 
-import com.mkbz.phelp.database.Table;
-
 /**
  * Created by MARCELO on 15-11-2015.
  */
-public class USSDTable implements Table {
+public class USSDTable{
 
 
     public static final String[] COLUMNS={USSDEntry.ID,USSDEntry.CODE,USSDEntry.TITLE,USSDEntry.DESCRIPTION,USSDEntry.COUNTRY,USSDEntry.OPERATOR};
