@@ -21,7 +21,7 @@ public class EmergencyList extends ListFragment {
         datasource = new ModelDataSource<>(getActivity(),Emergency.TABLE,Emergency.ID,new Emergency());
         datasource.open();
 
-        List<Emergency> values =  datasource.getAll();
+        List<Emergency> values =  datasource.getAll(null,null);
 
         values.add(new Emergency());
         // use the SimpleCursorAdapter to show the

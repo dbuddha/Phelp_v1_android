@@ -29,7 +29,7 @@ import java.util.List;
             datasource = new ModelDataSource<Country>(getActivity(), Country.TABLE,Country.ID,new Country());
             datasource.open();
 
-            List<Country> values =  datasource.getAll();
+            List<Country> values =  datasource.getAll(null,null);
 
            // values.add(new Country());
             // use the SimpleCursorAdapter to show the

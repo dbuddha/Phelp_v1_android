@@ -77,11 +77,11 @@ public abstract class DataSource<T> {
         return ret;
     }
 
-    public List<T> getAll() {
+    public List<T> getAll(String where,String[] params) {
         List<T> list = new ArrayList<T>();
 
         Cursor cursor = database.query(getTableName(),
-                allColumns, null, null, null, null, null);
+                allColumns, where, params, null, null, null);
 
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {

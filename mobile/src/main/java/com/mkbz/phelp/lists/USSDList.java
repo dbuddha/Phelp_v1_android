@@ -19,7 +19,7 @@ public class USSDList extends ListFragment {
         datasource = new ModelDataSource<USSD>(getActivity(),USSD.TABLE,USSD.ID,new USSD());
         datasource.open();
 
-        List<USSD> values =  datasource.getAll();
+        List<USSD> values =  datasource.getAll(null,null);
 
 
 
@@ -28,6 +28,8 @@ public class USSDList extends ListFragment {
         // elements in a ListView
         ArrayAdapter<USSD> adapter = new ArrayAdapter<USSD>(getActivity(),android.R.layout.simple_list_item_1, values);
         setListAdapter(adapter);
+
+
         Log.d("ussd","activity ussd created");
     }
 
