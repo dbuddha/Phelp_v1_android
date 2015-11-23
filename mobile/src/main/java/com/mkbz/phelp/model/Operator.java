@@ -12,6 +12,7 @@ public class Operator extends Model {
 
     private int network_code;
     private String name;
+    private String country;
 
 
     public Operator(){};
@@ -19,6 +20,7 @@ public class Operator extends Model {
         this.setId(c.getLong(0));
         this.setNetwork_code(c.getInt(1));
         this.setName(c.getString(2));
+        this.setCountry(c.getString(3));
     }
 
 
@@ -63,5 +65,13 @@ public class Operator extends Model {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
     }
 }
