@@ -21,6 +21,8 @@ public class USSDList extends ListFragment {
 
         List<USSD> values =  datasource.getAll();
 
+
+
         values.add(new USSD());
         // use the SimpleCursorAdapter to show the
         // elements in a ListView

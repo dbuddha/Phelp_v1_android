@@ -31,6 +31,8 @@ public class OperatorList extends ListFragment {
 
         List<Operator> values =  datasource.getAll();
 
+
+
         //values.add(new Operator());
         // use the SimpleCursorAdapter to show the
         // elements in a ListView
@@ -40,11 +42,13 @@ public class OperatorList extends ListFragment {
     }
     @Override
     public void onListItemClick(ListView l, View v, int position, long id){
+
         SharedPreferences.Editor editor = MainActivity.getSharedPreferences().edit();
         editor.putLong("operator_id", id);
         editor.commit();
         //datasource.get(id);
         Long aux = MainActivity.getSharedPreferences().getLong("operator_id", 0);
+
         Log.d("Operator", aux.toString());
     }
     @Override
