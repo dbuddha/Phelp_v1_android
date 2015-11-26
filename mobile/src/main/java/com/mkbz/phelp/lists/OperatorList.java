@@ -31,7 +31,7 @@ public class OperatorList extends ListFragment {
 
         String aux = MainActivity.getSharedPreferences().getString("country_id", "US");
         Log.d(aux, "Country value before operator query");
-        List<Operator> values =  datasource.getAll("country_id = ?", new String[]{aux});
+        List<Operator> values =  datasource.getAll("country_id = ?", new String[]{aux.toLowerCase()});
 
         //values.add(new Operator());
         // use the SimpleCursorAdapter to show the

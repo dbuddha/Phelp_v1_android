@@ -19,10 +19,11 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.mkbz.phelp.dialog.country.CountryPickerDialogFragment;
+import com.mkbz.phelp.dialog.operator.OperatorPickerDialogFragment;
 import com.mkbz.phelp.lists.*;
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity implements TabListener,OperatorPickerDialogFragment.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements TabListener{
     public static final String MyPREFERENCES = "myprefs";
     public static final String COUNTRY_PICKER = "COUNTRY_PICKER";
     public static final String OPERATOR_PICKER = "OPERATOR_PICKER";
@@ -123,11 +124,11 @@ public class MainActivity extends AppCompatActivity implements TabListener,Opera
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.select_country) {
-             CountryPickerDialogFragment picker = CountryPickerDialogFragment.newInstance("Choose Country");
+             CountryPickerDialogFragment picker = CountryPickerDialogFragment.newInstance("Select Country");
              picker.show(getSupportFragmentManager(), COUNTRY_PICKER);
         }
         if (id == R.id.select_operator) {
-            OperatorPickerDialogFragment picker = OperatorPickerDialogFragment.newInstance();
+            OperatorPickerDialogFragment picker = OperatorPickerDialogFragment.newInstance("Select Operator");
             picker.show(getSupportFragmentManager(), OPERATOR_PICKER);
         }
         return super.onOptionsItemSelected(item);
@@ -148,12 +149,6 @@ public class MainActivity extends AppCompatActivity implements TabListener,Opera
     public void onTabReselected(Tab tab, FragmentTransaction fragmentTransaction) {
 
     }
-
-    @Override
-    public void onFragmentInteraction(Uri uri) {
-        return;
-    }
-
     /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.
