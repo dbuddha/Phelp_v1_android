@@ -29,9 +29,9 @@ public class OperatorList extends ListFragment {
         datasource = new ModelDataSource<>(getActivity(), Operator.TABLE,Operator.ID,new Operator());
         datasource.open();
 
-        Long aux = MainActivity.getSharedPreferences().getLong("country_id", 0);
-
-        List<Operator> values =  datasource.getAll("country_id = ?", new String[]{String.valueOf(aux)});
+        String aux = MainActivity.getSharedPreferences().getString("country_id", "US");
+        Log.d(aux, "Country value before operator query");
+        List<Operator> values =  datasource.getAll("country_id = ?", new String[]{aux});
 
         //values.add(new Operator());
         // use the SimpleCursorAdapter to show the

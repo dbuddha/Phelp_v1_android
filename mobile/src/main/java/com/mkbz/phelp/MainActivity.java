@@ -18,10 +18,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.mkbz.phelp.dialog.country.CountryPickerDialogFragment;
 import com.mkbz.phelp.lists.*;
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity implements TabListener,CountryPickerDialogFragment.OnFragmentInteractionListener,OperatorPickerDialogFragment.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements TabListener,OperatorPickerDialogFragment.OnFragmentInteractionListener {
     public static final String MyPREFERENCES = "myprefs";
     public static final String COUNTRY_PICKER = "COUNTRY_PICKER";
     public static final String OPERATOR_PICKER = "OPERATOR_PICKER";
@@ -122,7 +123,7 @@ public class MainActivity extends AppCompatActivity implements TabListener,Count
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.select_country) {
-             CountryPickerDialogFragment picker = CountryPickerDialogFragment.newInstance();
+             CountryPickerDialogFragment picker = CountryPickerDialogFragment.newInstance("Choose Country");
              picker.show(getSupportFragmentManager(), COUNTRY_PICKER);
         }
         if (id == R.id.select_operator) {

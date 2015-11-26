@@ -1,6 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:orientation="vertical" android:layout_height="match_parent" tools:context="com.mkbz.phelp.CountryPickerDialogFragment">
+    android:orientation="vertical" android:layout_height="match_parent" tools:context="com.mkbz.phelp.dialog.country.CountryPickerDialogFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <EditText
@@ -11,14 +11,12 @@
         android:layout_margin="10dp"
         android:hint="@string/search"
         android:drawableLeft="@drawable/ic_action_search_dark" />
-    <fragment
+    <ListView
         android:layout_width="match_parent"
         android:layout_height="411dp"
-        android:name="com.mkbz.phelp.lists.CountryList"
-        android:id="@+id/fragment_list_country"
+        android:id="@+id/country_picker_listview"
         android:layout_gravity="bottom"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        tools:layout="@layout/abc_action_menu_layout" />
+        android:layout_marginBottom="10dp"/>
 </LinearLayout>
