@@ -8,8 +8,8 @@
         android:orderInCategory="100" app:showAsAction="ifRoom" />
     <item android:id="@+id/select_operator" android:title="@string/select_operator_string"
         android:orderInCategory="100" app:showAsAction="never" />
-    <item android:id="@+id/contact_button" android:title="@string/contact_button"
-        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/contact_button" android:icon="@drawable/ic_action_mail" android:title="@string/contact_button"
+        android:orderInCategory="100" app:showAsAction="ifRoom" />
     <item android:id="@+id/about_button"  android:title="@string/about_button"
         android:orderInCategory="100" app:showAsAction="never" />
 

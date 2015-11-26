@@ -1,5 +1,6 @@
 package com.mkbz.phelp;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -130,6 +131,24 @@ public class MainActivity extends AppCompatActivity implements TabListener{
         if (id == R.id.select_operator) {
             OperatorPickerDialogFragment picker = OperatorPickerDialogFragment.newInstance("Select Operator");
             picker.show(getSupportFragmentManager(), OPERATOR_PICKER);
+        }
+        if (id == R.id.contact_button) {
+/*
+            Intent intent = new Intent(Intent.ACTION_SENDTO);
+            intent.setType("plain/text");
+            intent.putExtra(Intent.EXTRA_EMAIL,new String[]{"mkbzdev@gmail.com"});
+            intent.putExtra(Intent.EXTRA_SUBJECT,"Support");
+            startActivity(Intent.createChooser(intent, "Select Mail App"));
+*/
+
+            Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+                    "mailto","mkbzdev@gmail.com", null));
+            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Support");
+            String [] addresses = {"mkbzdev@gmail.com"};
+            emailIntent.putExtra(Intent.EXTRA_EMAIL, addresses);
+            startActivity(Intent.createChooser(emailIntent, "Send email..."));
+
+
         }
         return super.onOptionsItemSelected(item);
     }
