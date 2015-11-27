@@ -182,7 +182,7 @@ public class OperatorPickerDialogFragment extends DialogFragment implements
                                     int position, long id) {
                 Operator operator = selectedOperatorsList.get(position);
                 SharedPreferences.Editor editor = MainActivity.getSharedPreferences().edit();
-                editor.putInt("operator_id", operator.getNetwork_code());
+                editor.putLong("operator_id", operator.getId());
                 editor.commit();
                 getDialog().dismiss();
 
@@ -190,7 +190,7 @@ public class OperatorPickerDialogFragment extends DialogFragment implements
                 Log.d("Operator", aux + "-" + position + " -> " + id + " -> " + operator.toString());
                 if (listener != null) {
                     listener.onSelectOperator(operator.getName(),
-                            operator.getNetwork_code());
+                            operator.getId());
                 }
             }
         });
