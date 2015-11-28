@@ -1,12 +1,15 @@
 package com.mkbz.phelp;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -19,6 +22,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.mkbz.phelp.dialer.DialCommand;
 import com.mkbz.phelp.view.country.CountryPickerDialogFragment;
 import com.mkbz.phelp.view.emergency.EmergencyPickerListFragment;
 import com.mkbz.phelp.view.operator.OperatorPickerDialogFragment;
@@ -30,8 +34,11 @@ public class MainActivity extends AppCompatActivity implements TabListener{
     public static final String COUNTRY_PICKER = "COUNTRY_PICKER";
     public static final String OPERATOR_PICKER = "OPERATOR_PICKER";
     public static final String COLOR_BACKGROUND_PHELP = "#BF392B";
+    // Declare
+    static final int PICK_CONTACT=1;
 
     private static final Drawable background_color = new ColorDrawable(Color.parseColor(COLOR_BACKGROUND_PHELP));
+    private DialCommand currentDialer;
 
     public static SharedPreferences getSharedPreferences() {
         return sharedPreferences;
@@ -174,6 +181,53 @@ public class MainActivity extends AppCompatActivity implements TabListener{
     public void onTabReselected(Tab tab, FragmentTransaction fragmentTransaction) {
 
     }
+
+
+
+    //code
+    @Override
+    public void onActivityResult(int reqCode, int resultCode, Intent data) {
+        super.onActivityResult(reqCode, resultCode, data);
+
+        switch (reqCode) {
+            case (PICK_CONTACT) :
+                if (resultCode == Activity.RESULT_OK) {
+                    String cNumber;
+                    Uri contactData = data.getData();
+                    Cursor c =  managedQuery(contactData, null, null, null, null);
+                    if (c.moveToFirst()) {
+
+
+                        String id =c.getString(c.getColumnIndexOrThrow(ContactsContract.Contacts._ID));
+
+                        String hasPhone =c.getString(c.getColumnIndex(ContactsContract.Contacts.HAS_PHONE_NUMBER));
+
+                        if (hasPhone.equalsIgnoreCase("1")) {
+                            Cursor phones = getContentResolver().query(
+                                    ContactsContract.CommonDataKinds.Phone.CONTENT_URI,null,
+                                    ContactsContract.CommonDataKinds.Phone.CONTACT_ID +" = "+ id,
+                                    null, null);
+                            phones.moveToFirst();
+                            cNumber = phones.getString(phones.getColumnIndex("data1"));
+                            currentDialer.fixNumber(cNumber);
+                        }
+                        String name = c.getString(c.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
+
+
+                    }
+                }
+                break;
+        }
+    }
+
+    public void setCurrentDialer(DialCommand currentDialer) {
+        this.currentDialer = currentDialer;
+    }
+
+    public DialCommand getCurrentDialer() {
+        return currentDialer;
+    }
+
     /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.

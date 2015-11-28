@@ -2,6 +2,10 @@ package com.mkbz.phelp.dialer;
 
 import android.app.FragmentManager;
 import android.content.Context;
+import android.content.Intent;
+import android.provider.ContactsContract;
+
+import com.mkbz.phelp.MainActivity;
 
 /**
  * Created by MARCELO on 18-11-2015.
@@ -10,9 +14,9 @@ public class DialCommand {
 
     private String code;
     private Context context;
-    private FragmentManager manager;
+    private MainActivity manager;
 
-    public DialCommand(String code,Context context,FragmentManager fm){
+    public DialCommand(String code,Context context,MainActivity fm){
         this.code=code;
         this.context=context;
         this.manager=fm;
@@ -29,6 +33,18 @@ public class DialCommand {
 
     private void launchDialog(){
         //TODO: vai faltar executar quando existe numero ou valor no ussd
+
+        Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
+
+        manager.setCurrentDialer(this);
+        manager.startActivityForResult(intent,1);
+
     }
 
+
+    public void fixNumber(String cNumber) {
+        int index = this.code.indexOf("n");
+        code.replaceAll("n",cNumber);
+        execute();
+    }
 }
