@@ -18,15 +18,21 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBar.*;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.internal.view.SupportMenuInflater;
+import android.util.Log;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 
 import com.mkbz.phelp.dialer.DialCommand;
+import com.mkbz.phelp.view.country.CountryListAdapter;
 import com.mkbz.phelp.view.country.CountryPickerDialogFragment;
 import com.mkbz.phelp.view.emergency.EmergencyPickerListFragment;
 import com.mkbz.phelp.view.operator.OperatorPickerDialogFragment;
 import com.mkbz.phelp.lists.*;
+
+import java.lang.reflect.Field;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity implements TabListener{
@@ -38,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements TabListener{
     static final int PICK_CONTACT=1;
 
     private static final Drawable background_color = new ColorDrawable(Color.parseColor(COLOR_BACKGROUND_PHELP));
+    public static Menu menu;
     private DialCommand currentDialer;
 
     public static SharedPreferences getSharedPreferences() {
@@ -119,12 +126,48 @@ public class MainActivity extends AppCompatActivity implements TabListener{
         }
     }
 
-
+    private static MenuItem countryIcon;
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        MenuInflater inflater = getMenuInflater();
+        MainActivity.menu=menu;
+        setCountryIcon(menu, inflater);
         return true;
+    }
+
+    public static void updatedCountry() {
+        countryIcon = menu.findItem(R.id.select_country);
+        String drawableName = "flag"+sharedPreferences.getString("country_id","US").toLowerCase(Locale.ENGLISH);
+        int id = -1;
+        try {
+            Class<R.drawable> res = R.drawable.class;
+            Field field = res.getField(drawableName);
+            int drawableId = field.getInt(null);
+            id =  drawableId;
+        } catch (Exception e) {
+            Log.e("COUNTRYPICKER", "Failure to get drawable id.", e);
+        }
+        if (id!=-1)
+            countryIcon.setIcon(id);
+    }
+
+
+    private void setCountryIcon(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.menu_main, menu);
+        countryIcon = menu.findItem(R.id.select_country);
+        String drawableName = "flag"+sharedPreferences.getString("country_id","US").toLowerCase(Locale.ENGLISH);
+        int id = -1;
+        try {
+            Class<R.drawable> res = R.drawable.class;
+            Field field = res.getField(drawableName);
+            int drawableId = field.getInt(null);
+            id =  drawableId;
+        } catch (Exception e) {
+            Log.e("COUNTRYPICKER", "Failure to get drawable id.", e);
+        }
+        if (id!=-1)
+        countryIcon.setIcon(id);
     }
 
     public static View view;

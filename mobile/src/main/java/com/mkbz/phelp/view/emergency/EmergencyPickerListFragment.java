@@ -28,14 +28,11 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 
-public class EmergencyPickerListFragment extends Fragment implements
-        Comparator<Emergency> {
+public class EmergencyPickerListFragment extends Fragment{
     /**
      * View components
      */
     private static ViewGroup container;
-
-    private EditText searchEditText;
     private ListView EmergencyListView;
 
     /**
@@ -67,20 +64,19 @@ public class EmergencyPickerListFragment extends Fragment implements
         this.listener = listener;
     }
 
-    public EditText getSearchEditText() {
-        return searchEditText;
-    }
-
     public ListView getCountryListView() {
         return EmergencyListView;
     }
 
 
-    public void updatedCountry(){
-        allEmergencysList=null;
-
+    public void updatedCountry() {
+       /* allEmergencysList=null;
+        adapter.updateData(getAllEmergencys());*/
+        allEmergencysList = null;
         adapter.updateData(getAllEmergencys());
+        //adapter.notifyDataSetChanged();
     }
+
     /**
      * Get all countries with code and name from res/raw/countries.json
      *
@@ -91,7 +87,7 @@ public class EmergencyPickerListFragment extends Fragment implements
             try {
                 ModelDataSource<Emergency> datasource;
                 allEmergencysList = new ArrayList<Emergency>();
-                datasource = new ModelDataSource<>(getActivity(), Emergency.TABLE,Emergency.ID,new Emergency());
+                datasource = new ModelDataSource<>(getActivity(), Emergency.TABLE, Emergency.ID, new Emergency());
                 datasource.open();
                 String aux = MainActivity.getSharedPreferences().getString("country_id", "US").toUpperCase();
                 Log.d(aux, "Country value before Emergency query");
@@ -132,6 +128,7 @@ public class EmergencyPickerListFragment extends Fragment implements
         }
         return null;
     }
+
     /**
      * To support show as dialog
      *
@@ -153,7 +150,7 @@ public class EmergencyPickerListFragment extends Fragment implements
     public View onCreateView(LayoutInflater inflater, ViewGroup viewContainer,
                              final Bundle savedInstanceState) {
         // Inflate view
-        View view = inflater.inflate(R.layout.country_dialog_layout, null);
+        View view = inflater.inflate(R.layout.emergency_layout, null);
         // Get countries from the database
         getAllEmergencys();
 
@@ -161,10 +158,8 @@ public class EmergencyPickerListFragment extends Fragment implements
         Bundle args = getArguments();
 
         // Get view components
-        searchEditText = (EditText) view
-                .findViewById(R.id.country_picker_search);
         EmergencyListView = (ListView) view
-                .findViewById(R.id.country_picker_listview);
+                .findViewById(R.id.emergency_picker_listview);
 
         // Set adapter
         adapter = new EmergencyListAdapter(getActivity(), selectedEmergencysList);
@@ -181,56 +176,7 @@ public class EmergencyPickerListFragment extends Fragment implements
                 startActivity(intent);
             }
         });
-
-
-        // Search for which countries matched user query
-        searchEditText.addTextChangedListener(new TextWatcher() {
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before,
-                                      int count) {
-            }
-
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count,
-                                          int after) {
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                search(s.toString());
-            }
-        });
-
         return view;
-    }
-
-    /**
-     * Search allCountriesList contains text and put result into
-     * selectedEmergencysList
-     *
-     * @param text
-     */
-    @SuppressLint("DefaultLocale")
-    private void search(String text) {
-        selectedEmergencysList.clear();
-
-        for (Emergency Emergency : allEmergencysList) {
-            if (Emergency.getTitle().toLowerCase(Locale.ENGLISH)
-                    .contains(text.toLowerCase())) {
-                selectedEmergencysList.add(Emergency);
-            }
-        }
-
-        adapter.notifyDataSetChanged();
-    }
-
-    /**
-     * Support sorting the countries list
-     */
-    @Override
-    public int compare(Emergency lhs, Emergency rhs) {
-        return lhs.getTitle().compareTo(rhs.getTitle());
     }
 
 }

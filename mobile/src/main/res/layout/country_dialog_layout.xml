@@ -4,7 +4,6 @@
 
     <!-- TODO: Update blank fragment layout -->
     <EditText
-        android:colorAccent="#000000"
         android:id="@+id/country_picker_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -208,6 +208,7 @@ public class CountryPickerDialogFragment extends DialogFragment implements
                     listener.onSelectCountry(country.getName(),
                             country.getCode());
                 }
+                MainActivity.updatedCountry();
                 MainActivity.emergencyFragment.updatedCountry();
                 OperatorPickerDialogFragment picker = OperatorPickerDialogFragment.newInstance("Select Operator");
                 picker.show(fragment, MainActivity.OPERATOR_PICKER);
