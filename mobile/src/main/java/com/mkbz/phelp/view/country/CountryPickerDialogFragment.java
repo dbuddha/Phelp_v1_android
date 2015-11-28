@@ -1,4 +1,4 @@
-        package com.mkbz.phelp.dialog.country;
+        package com.mkbz.phelp.view.country;
 
 
         import java.util.ArrayList;
@@ -11,6 +11,7 @@
         import android.content.SharedPreferences;
         import android.os.Bundle;
         import android.support.v4.app.DialogFragment;
+        import android.support.v4.app.FragmentManager;
         import android.text.Editable;
         import android.text.TextWatcher;
         import android.util.Log;
@@ -26,6 +27,7 @@
         import com.mkbz.phelp.R;
         import com.mkbz.phelp.datasource.ModelDataSource;
         import com.mkbz.phelp.model.Country;
+        import com.mkbz.phelp.view.operator.OperatorPickerDialogFragment;
 
         public class CountryPickerDialogFragment extends DialogFragment implements
         Comparator<Country> {
@@ -34,7 +36,7 @@
      */
     private EditText searchEditText;
     private ListView countryListView;
-
+    private static FragmentManager fragment;
     /**
      * Adapter for the listview
      */
@@ -105,7 +107,7 @@
 
                 selectedCountriesList = new ArrayList<Country>();
                 selectedCountriesList.addAll(allCountriesList);
-
+                datasource.close();
                 return allCountriesList;
               /*  // Read from local file
                 String allCountriesString = readFileAsString(getActivity());
@@ -143,7 +145,8 @@
      * @param dialogTitle
      * @return
      */
-    public static CountryPickerDialogFragment newInstance(String dialogTitle) {
+    public static CountryPickerDialogFragment newInstance(String dialogTitle,FragmentManager fgm) {
+        fragment = fgm;
         CountryPickerDialogFragment picker = new CountryPickerDialogFragment();
         Bundle bundle = new Bundle();
         bundle.putString("dialogTitle", dialogTitle);
@@ -204,6 +207,8 @@
                     listener.onSelectCountry(country.getName(),
                             country.getCode());
                 }
+                OperatorPickerDialogFragment picker = OperatorPickerDialogFragment.newInstance("Select Operator");
+                picker.show(fragment, MainActivity.OPERATOR_PICKER);
             }
         });
 

@@ -1,4 +1,4 @@
-package com.mkbz.phelp.dialog.operator;
+package com.mkbz.phelp.view.operator;
 
 /**
  * Created by Jos on 26/11/2015.

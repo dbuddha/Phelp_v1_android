@@ -1,14 +1,11 @@
-package com.mkbz.phelp.dialog.operator;
-
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Locale;
+package com.mkbz.phelp.view.emergency;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
+import android.support.v4.app.Fragment;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -23,45 +20,50 @@ import android.widget.ListView;
 import com.mkbz.phelp.MainActivity;
 import com.mkbz.phelp.R;
 import com.mkbz.phelp.datasource.ModelDataSource;
-import com.mkbz.phelp.dialog.operator.OperatorListAdapter;
-import com.mkbz.phelp.dialog.operator.OperatorPickerListener;
-import com.mkbz.phelp.model.Country;
-import com.mkbz.phelp.model.Operator;
+import com.mkbz.phelp.dialer.Dialer;
+import com.mkbz.phelp.model.Emergency;
 
-public class OperatorPickerDialogFragment extends DialogFragment implements
-        Comparator<Operator> {
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Locale;
+
+public class EmergencyPickerListFragment extends Fragment implements
+        Comparator<Emergency> {
     /**
      * View components
      */
+    private static ViewGroup container;
+
     private EditText searchEditText;
-    private ListView operatorListView;
+    private ListView EmergencyListView;
 
     /**
      * Adapter for the listview
      */
-    private OperatorListAdapter adapter;
+    private EmergencyListAdapter adapter;
 
     /**
      * Hold all countries, sorted by country name
      */
-    private List<Operator> allOperatorsList;
+    private List<Emergency> allEmergencysList;
 
     /**
      * Hold countries that matched user query
      */
-    private List<Operator> selectedOperatorsList;
+    private List<Emergency> selectedEmergencysList;
 
     /**
      * Listener to which country user selected
      */
-    private OperatorPickerListener listener;
+    private EmergencyPickerListener listener;
 
     /**
      * Set listener
      *
      * @param listener
      */
-    public void setListener(OperatorPickerListener listener) {
+    public void setListener(EmergencyPickerListener listener) {
         this.listener = listener;
     }
 
@@ -70,7 +72,7 @@ public class OperatorPickerDialogFragment extends DialogFragment implements
     }
 
     public ListView getCountryListView() {
-        return operatorListView;
+        return EmergencyListView;
     }
 
 
@@ -79,22 +81,22 @@ public class OperatorPickerDialogFragment extends DialogFragment implements
      *
      * @return
      */
-    private List<Operator> getAllOperators() {
-        if (allOperatorsList == null) {
+    private List<Emergency> getAllEmergencys() {
+        if (allEmergencysList == null) {
             try {
-                ModelDataSource<Operator> datasource;
-                allOperatorsList = new ArrayList<Operator>();
-                datasource = new ModelDataSource<>(getActivity(), Operator.TABLE,Operator.ID,new Operator());
+                ModelDataSource<Emergency> datasource;
+                allEmergencysList = new ArrayList<Emergency>();
+                datasource = new ModelDataSource<>(getActivity(), Emergency.TABLE,Emergency.ID,new Emergency());
                 datasource.open();
                 String aux = MainActivity.getSharedPreferences().getString("country_id", "US").toLowerCase();
-                Log.d(aux, "Country value before operator query");
-                allOperatorsList.addAll(datasource.getAll("country_id = ?", new String[]{aux}));
-               // allOperatorsList.addAll(datasource.getAll(null,null));
+                Log.d(aux, "Country value before Emergency query");
+                allEmergencysList.addAll(datasource.getAll("country_id = ?", new String[]{aux}));
+               // allEmergencysList.addAll(datasource.getAll(null,null));
 
-                selectedOperatorsList = new ArrayList<Operator>();
-                selectedOperatorsList.addAll(allOperatorsList);
-
-                return allOperatorsList;
+                selectedEmergencysList = new ArrayList<Emergency>();
+                selectedEmergencysList.addAll(allEmergencysList);
+                datasource.close();
+                return allEmergencysList;
               /*  // Read from local file
                 String allCountriesString = readFileAsString(getActivity());
                 Log.d("countrypicker", "country: " + allCountriesString);
@@ -114,8 +116,8 @@ public class OperatorPickerDialogFragment extends DialogFragment implements
                 Collections.sort(allCountriesList, this);
 
                 // Initialize selected countries with all countries
-                selectedOperatorsList = new ArrayList<Country>();
-                selectedOperatorsList.addAll(allCountriesList);
+                selectedEmergencysList = new ArrayList<Country>();
+                selectedEmergencysList.addAll(allCountriesList);
 
                 // Return*/
 
@@ -131,8 +133,8 @@ public class OperatorPickerDialogFragment extends DialogFragment implements
      * @param dialogTitle
      * @return
      */
-    public static OperatorPickerDialogFragment newInstance(String dialogTitle) {
-        OperatorPickerDialogFragment picker = new OperatorPickerDialogFragment();
+    public static EmergencyPickerListFragment newInstance(String dialogTitle) {
+        EmergencyPickerListFragment picker = new EmergencyPickerListFragment();
         Bundle bundle = new Bundle();
         bundle.putString("dialogTitle", dialogTitle);
         picker.setArguments(bundle);
@@ -143,55 +145,35 @@ public class OperatorPickerDialogFragment extends DialogFragment implements
      * Create view
      */
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup viewContainer,
+                             final Bundle savedInstanceState) {
         // Inflate view
         View view = inflater.inflate(R.layout.country_dialog_layout, null);
-
         // Get countries from the database
-        getAllOperators();
+        getAllEmergencys();
 
         // Set dialog title if show as dialog
         Bundle args = getArguments();
-        if (args != null) {
-            String dialogTitle = args.getString("dialogTitle");
-            getDialog().setTitle(dialogTitle);
-/*
-            int width = getResources().getDimensionPixelSize(
-                    R.dimen.cp_dialog_width);
-            int height = getResources().getDimensionPixelSize(
-                    R.dimen.cp_dialog_height);
-            getDialog().getWindow().setLayout(width, height);*/
-        }
 
         // Get view components
         searchEditText = (EditText) view
                 .findViewById(R.id.country_picker_search);
-        operatorListView = (ListView) view
+        EmergencyListView = (ListView) view
                 .findViewById(R.id.country_picker_listview);
 
         // Set adapter
-        adapter = new OperatorListAdapter(getActivity(), selectedOperatorsList);
-        operatorListView.setAdapter(adapter);
+        adapter = new EmergencyListAdapter(getActivity(), selectedEmergencysList);
+        EmergencyListView.setAdapter(adapter);
 
         // Inform listener
-        operatorListView.setOnItemClickListener(new OnItemClickListener() {
+        EmergencyListView.setOnItemClickListener(new OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                Operator operator = selectedOperatorsList.get(position);
-                SharedPreferences.Editor editor = MainActivity.getSharedPreferences().edit();
-                editor.putLong("operator_id", operator.getId());
-                editor.commit();
-                getDialog().dismiss();
-
-                int aux = MainActivity.getSharedPreferences().getInt("operator_id", 0);
-                Log.d("Operator", aux + "-" + position + " -> " + id + " -> " + operator.toString());
-                if (listener != null) {
-                    listener.onSelectOperator(operator.getName(),
-                            operator.getId());
-                }
+                Emergency Emergency = selectedEmergencysList.get(position);
+                Intent intent = Dialer.getExecutable(Emergency.getCode());
+                startActivity(intent);
             }
         });
 
@@ -219,18 +201,18 @@ public class OperatorPickerDialogFragment extends DialogFragment implements
 
     /**
      * Search allCountriesList contains text and put result into
-     * selectedOperatorsList
+     * selectedEmergencysList
      *
      * @param text
      */
     @SuppressLint("DefaultLocale")
     private void search(String text) {
-        selectedOperatorsList.clear();
+        selectedEmergencysList.clear();
 
-        for (Operator operator : allOperatorsList) {
-            if (operator.getName().toLowerCase(Locale.ENGLISH)
+        for (Emergency Emergency : allEmergencysList) {
+            if (Emergency.getTitle().toLowerCase(Locale.ENGLISH)
                     .contains(text.toLowerCase())) {
-                selectedOperatorsList.add(operator);
+                selectedEmergencysList.add(Emergency);
             }
         }
 
@@ -241,8 +223,8 @@ public class OperatorPickerDialogFragment extends DialogFragment implements
      * Support sorting the countries list
      */
     @Override
-    public int compare(Operator lhs, Operator rhs) {
-        return lhs.getName().compareTo(rhs.getName());
+    public int compare(Emergency lhs, Emergency rhs) {
+        return lhs.getTitle().compareTo(rhs.getTitle());
     }
 
 }

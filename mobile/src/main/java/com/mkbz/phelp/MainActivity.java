@@ -19,8 +19,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.mkbz.phelp.dialog.country.CountryPickerDialogFragment;
-import com.mkbz.phelp.dialog.operator.OperatorPickerDialogFragment;
+import com.mkbz.phelp.view.country.CountryPickerDialogFragment;
+import com.mkbz.phelp.view.emergency.EmergencyPickerListFragment;
+import com.mkbz.phelp.view.operator.OperatorPickerDialogFragment;
 import com.mkbz.phelp.lists.*;
 import java.util.Locale;
 
@@ -125,8 +126,9 @@ public class MainActivity extends AppCompatActivity implements TabListener{
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.select_country) {
-             CountryPickerDialogFragment picker = CountryPickerDialogFragment.newInstance("Select Country");
+             CountryPickerDialogFragment picker = CountryPickerDialogFragment.newInstance("Select Country",getSupportFragmentManager());
              picker.show(getSupportFragmentManager(), COUNTRY_PICKER);
+
         }
         if (id == R.id.select_operator) {
             OperatorPickerDialogFragment picker = OperatorPickerDialogFragment.newInstance("Select Operator");
@@ -174,7 +176,7 @@ public class MainActivity extends AppCompatActivity implements TabListener{
      */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-        private Fragment[] fragments={new USSDList(),new EmergencyList(),new USSDList()};
+        public Fragment[] fragments={new USSDList(),new EmergencyPickerListFragment(),new USSDList()};
 
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
@@ -184,7 +186,6 @@ public class MainActivity extends AppCompatActivity implements TabListener{
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
-
             return fragments[position];
         }
 

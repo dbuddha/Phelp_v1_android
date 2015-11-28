@@ -1,4 +1,4 @@
-package com.mkbz.phelp.dialog.country;
+package com.mkbz.phelp.view.country;
 
 /**
  * Created by Jos on 26/11/2015.

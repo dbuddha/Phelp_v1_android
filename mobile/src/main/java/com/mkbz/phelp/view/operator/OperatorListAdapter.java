@@ -1,11 +1,6 @@
-package com.mkbz.phelp.dialog.country;
-
-import java.lang.reflect.Field;
-import java.util.List;
-import java.util.Locale;
+package com.mkbz.phelp.view.operator;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,12 +10,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.mkbz.phelp.R;
-import com.mkbz.phelp.model.Country;
+import com.mkbz.phelp.model.Operator;
 
-public class CountryListAdapter extends BaseAdapter {
+import java.lang.reflect.Field;
+import java.util.List;
+import java.util.Locale;
+
+public class OperatorListAdapter extends BaseAdapter {
 
     private Context context;
-    List<Country> countries;
+    List<Operator> operators;
     LayoutInflater inflater;
 
     /**
@@ -41,7 +40,7 @@ public class CountryListAdapter extends BaseAdapter {
             int drawableId = field.getInt(null);
             return drawableId;
         } catch (Exception e) {
-            Log.e("COUNTRYPICKER", "Failure to get drawable id.", e);
+            Log.e("OPERATORPICKER", "Failure to get drawable id.", e);
         }
         return -1;
     }
@@ -50,12 +49,12 @@ public class CountryListAdapter extends BaseAdapter {
      * Constructor
      *
      * @param context
-     * @param countries
+     * @param operators
      */
-    public CountryListAdapter(Context context, List<Country> countries) {
+    public OperatorListAdapter(Context context, List<Operator> operators) {
         super();
         this.context = context;
-        this.countries = countries;
+        this.operators = operators;
         inflater = (LayoutInflater) this.context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
@@ -63,7 +62,7 @@ public class CountryListAdapter extends BaseAdapter {
     @Override
     public int getCount() {
         // TODO Auto-generated method stub
-        return countries.size();
+        return operators.size();
     }
 
     @Override
@@ -85,7 +84,7 @@ public class CountryListAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         View cellView = convertView;
         Cell cell;
-        Country country = countries.get(position);
+        Operator operator = operators.get(position);
 
         if (convertView == null) {
             cell = new Cell();
@@ -97,10 +96,9 @@ public class CountryListAdapter extends BaseAdapter {
             cell = (Cell) cellView.getTag();
         }
 
-        cell.textView.setText(country.getName());
+        cell.textView.setText(operator.getName());
 
-        // Load drawable dynamically from country code
-        String drawableName = "flag"+country.getCode().toLowerCase(Locale.ENGLISH);
+        String drawableName = "flag"+operator.getCountry().toLowerCase(Locale.ENGLISH);
         if (getResId(drawableName)!=-1)
                 cell.imageView.setImageResource(getResId(drawableName));
         return cellView;
