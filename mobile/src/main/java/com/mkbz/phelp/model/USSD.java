@@ -19,7 +19,13 @@ public class USSD extends Model {
     public USSD(){};
 
     public USSD(Cursor c) {
-        //TODO: falta fazer load apartir de cursor
+
+        id=c.getLong(0);
+        code=c.getString(1);
+        title=c.getString(2);
+        description=c.getString(3);
+        country=c.getString(4);
+        operator=c.getInt(5);
     }
 
     @Override

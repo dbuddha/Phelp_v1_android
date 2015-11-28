@@ -18,7 +18,11 @@ public class Emergency extends Model {
 
     }
     public Emergency(Cursor c) {
-
+        id=c.getLong(0);
+        code=c.getString(1);
+        title=c.getString(2);
+        description=c.getString(3);
+        country=c.getString(4);
     }
 
 
