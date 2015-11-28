@@ -92,7 +92,7 @@ public class EmergencyListAdapter extends BaseAdapter {
 
         if (convertView == null) {
             cell = new Cell();
-            cellView = inflater.inflate(R.layout.fragment_list_country_item, null);
+            cellView = inflater.inflate(R.layout.fragment_list_emergency_item, null);
             cell.textView = (TextView) cellView.findViewById(R.id.row_title);
             cell.imageView = (ImageView) cellView.findViewById(R.id.row_icon);
             cellView.setTag(cell);
