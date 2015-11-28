@@ -22,6 +22,10 @@ public class EmergencyListAdapter extends BaseAdapter {
     List<Emergency> Emergencys;
     LayoutInflater inflater;
 
+    public void updateData(List<Emergency> list){
+        Emergencys=list;
+        notifyDataSetChanged();
+    }
     /**
      * The drawable image name has the format "flag_$countryCode". We need to
      * load the drawable dynamically from country code. Code from

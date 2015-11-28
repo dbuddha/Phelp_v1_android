@@ -78,8 +78,8 @@ public class EmergencyPickerListFragment extends Fragment implements
 
     public void updatedCountry(){
         allEmergencysList=null;
-        getAllEmergencys();
-        adapter.notifyDataSetChanged();
+
+        adapter.updateData(getAllEmergencys());
     }
     /**
      * Get all countries with code and name from res/raw/countries.json
