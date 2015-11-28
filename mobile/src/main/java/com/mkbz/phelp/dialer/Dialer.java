@@ -21,8 +21,7 @@ public abstract class Dialer {
 
         code = parseCode(code);
 
-        Intent executable = new Intent(action);
-        executable.setData(Uri.parse(code));
+        Intent executable = new Intent(action,Uri.parse("tel:" + code));
 
         return executable;
         //startActivity(intent);

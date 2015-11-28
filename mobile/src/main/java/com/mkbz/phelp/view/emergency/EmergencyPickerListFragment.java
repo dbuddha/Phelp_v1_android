@@ -95,8 +95,8 @@ public class EmergencyPickerListFragment extends Fragment implements
                 datasource.open();
                 String aux = MainActivity.getSharedPreferences().getString("country_id", "US").toUpperCase();
                 Log.d(aux, "Country value before Emergency query");
-                //allEmergencysList.addAll(datasource.getAll("country_id = ?", new String[]{aux}));
-                allEmergencysList.addAll(datasource.getAll(null,null));
+                allEmergencysList.addAll(datasource.getAll("country_id = ?", new String[]{aux}));
+                //allEmergencysList.addAll(datasource.getAll(null,null));
 
                 selectedEmergencysList = new ArrayList<Emergency>();
                 selectedEmergencysList.addAll(allEmergencysList);
