@@ -202,7 +202,7 @@ public class CountryPickerDialogFragment extends DialogFragment implements
                 editor.commit();
                 getDialog().dismiss();
 
-                String aux = MainActivity.getSharedPreferences().getString("country_id", "PT");
+                String aux = MainActivity.getSharedPreferences().getString("country_id", "US");
                 Log.d("Country", aux + "-" + position + " -> " + id + " -> " + country.toString());
                 if (listener != null) {
                     listener.onSelectCountry(country.getName(),
