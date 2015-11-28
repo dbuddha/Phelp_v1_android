@@ -102,9 +102,9 @@ public class EmergencyListAdapter extends BaseAdapter {
 
         cell.textView.setText(Emergency.getTitle());
 
-       /* String drawableName = "flag"+Emergency.getCountry().toLowerCase(Locale.ENGLISH);
+       String drawableName = "emergency_"+Emergency.getTitle().toLowerCase();
         if (getResId(drawableName)!=-1)
-                cell.imageView.setImageResource(getResId(drawableName));*/
+                cell.imageView.setImageResource(getResId(drawableName));
         return cellView;
     }
 
