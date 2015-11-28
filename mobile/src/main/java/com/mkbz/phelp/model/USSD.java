@@ -71,4 +71,20 @@ public class USSD extends Model {
     public void setCode(String code) {
         this.code = code;
     }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public int getOperator() {
+        return operator;
+    }
+
+    public void setOperator(int operator) {
+        this.operator = operator;
+    }
 }
