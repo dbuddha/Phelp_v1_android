@@ -100,7 +100,7 @@ public class EmergencyListAdapter extends BaseAdapter {
 
         cell.textView.setText(Emergency.getTitle());
 
-       String drawableName = "emergency_"+Emergency.getTitle().toLowerCase();
+       String drawableName = "emergency_"+Emergency.getTitle().replace(' ','_').toLowerCase();
         if (getResId(drawableName)!=-1)
                 cell.imageView.setImageResource(getResId(drawableName));
         return cellView;
