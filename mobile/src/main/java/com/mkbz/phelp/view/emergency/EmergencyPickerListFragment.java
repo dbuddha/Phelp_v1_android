@@ -76,6 +76,10 @@ public class EmergencyPickerListFragment extends Fragment implements
     }
 
 
+    public void updatedCountry(){
+        getAllEmergencys();
+        adapter.notifyDataSetChanged();
+    }
     /**
      * Get all countries with code and name from res/raw/countries.json
      *
@@ -176,6 +180,7 @@ public class EmergencyPickerListFragment extends Fragment implements
                 startActivity(intent);
             }
         });
+
 
         // Search for which countries matched user query
         searchEditText.addTextChangedListener(new TextWatcher() {

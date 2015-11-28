@@ -56,12 +56,14 @@ public class MainActivity extends AppCompatActivity implements TabListener{
      * The {@link ViewPager} that will host the section contents.
      */
     ViewPager mViewPager;
+    public static EmergencyPickerListFragment emergencyFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        emergencyFragment = new EmergencyPickerListFragment();
         sharedPreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
         // Set up the action bar.
         final ActionBar actionBar = getSupportActionBar();
@@ -92,6 +94,8 @@ public class MainActivity extends AppCompatActivity implements TabListener{
                 actionBar.setSelectedNavigationItem(position);
             }
         });
+
+
 
         // For each of the sections in the app, add a tab to the action bar.
         for (int i = 0; i < mSectionsPagerAdapter.getCount(); i++) {
@@ -176,7 +180,7 @@ public class MainActivity extends AppCompatActivity implements TabListener{
      */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-        public Fragment[] fragments={new USSDList(),new EmergencyPickerListFragment(),new USSDList()};
+        public Fragment[] fragments={new USSDList(),emergencyFragment,new USSDList()};
 
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);

@@ -29,7 +29,7 @@
         import com.mkbz.phelp.model.Country;
         import com.mkbz.phelp.view.operator.OperatorPickerDialogFragment;
 
-        public class CountryPickerDialogFragment extends DialogFragment implements
+public class CountryPickerDialogFragment extends DialogFragment implements
         Comparator<Country> {
     /**
      * View components
@@ -89,6 +89,7 @@
         }
         return null;
     }
+
 
     /**
      * Get all countries with code and name from res/raw/countries.json
@@ -207,6 +208,7 @@
                     listener.onSelectCountry(country.getName(),
                             country.getCode());
                 }
+                MainActivity.emergencyFragment.updatedCountry();
                 OperatorPickerDialogFragment picker = OperatorPickerDialogFragment.newInstance("Select Operator");
                 picker.show(fragment, MainActivity.OPERATOR_PICKER);
             }
