@@ -39,6 +39,8 @@ public class DialCommand {
         manager.setCurrentDialer(this);
         manager.startActivityForResult(intent,1);
 
+
+
     }
 
 
