@@ -29,6 +29,7 @@ import com.mkbz.phelp.dialer.DialCommand;
 import com.mkbz.phelp.view.country.CountryListAdapter;
 import com.mkbz.phelp.view.country.CountryPickerDialogFragment;
 import com.mkbz.phelp.view.emergency.EmergencyPickerListFragment;
+import com.mkbz.phelp.view.favorite.FavoritePickerListFragment;
 import com.mkbz.phelp.view.operator.OperatorPickerDialogFragment;
 import com.mkbz.phelp.lists.*;
 
@@ -71,6 +72,7 @@ public class MainActivity extends AppCompatActivity implements TabListener{
      */
     ViewPager mViewPager;
     public static EmergencyPickerListFragment emergencyFragment;
+    public static FavoritePickerListFragment favoriteFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,6 +80,7 @@ public class MainActivity extends AppCompatActivity implements TabListener{
         setContentView(R.layout.activity_main);
 
         emergencyFragment = new EmergencyPickerListFragment();
+        favoriteFragment = new FavoritePickerListFragment();
         sharedPreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
         // Set up the action bar.
         final ActionBar actionBar = getSupportActionBar();
@@ -277,7 +280,7 @@ public class MainActivity extends AppCompatActivity implements TabListener{
      */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-        public Fragment[] fragments={new USSDList(),emergencyFragment,new USSDList()};
+        public Fragment[] fragments={favoriteFragment,emergencyFragment,new USSDList()};
 
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
