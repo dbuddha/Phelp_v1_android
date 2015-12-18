@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements TabListener{
 
     private static final Drawable background_color = new ColorDrawable(Color.parseColor(COLOR_BACKGROUND_PHELP));
     public static Menu menu;
-    private DialCommand currentDialer;
+    private static DialCommand currentDialer;
 
     public static SharedPreferences getSharedPreferences() {
         return sharedPreferences;
@@ -75,6 +75,8 @@ public class MainActivity extends AppCompatActivity implements TabListener{
     public static EmergencyPickerListFragment emergencyFragment;
     public static USSDPickerListFragment ussdFragment;
     public static FavoritePickerListFragment favoriteFragment;
+    public static Context context;
+    public static MainActivity fragmentManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,6 +86,8 @@ public class MainActivity extends AppCompatActivity implements TabListener{
         emergencyFragment = new EmergencyPickerListFragment();
         favoriteFragment = new FavoritePickerListFragment();
         ussdFragment = new USSDPickerListFragment();
+        context = getApplicationContext();
+        fragmentManager = this;
 
         sharedPreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
         // Set up the action bar.
@@ -141,6 +145,19 @@ public class MainActivity extends AppCompatActivity implements TabListener{
         MainActivity.menu=menu;
         setCountryIcon(menu, inflater);
         return true;
+    }
+
+
+    public void executeCommand(Intent i){
+        startActivity(i);
+    }
+
+    public static void runCommand(String code){
+        DialCommand command = new DialCommand(code,fragmentManager);
+        currentDialer = command;
+
+        currentDialer.execute();
+
     }
 
     public static void updatedCountry() {
@@ -237,6 +254,11 @@ public class MainActivity extends AppCompatActivity implements TabListener{
     //code
     @Override
     public void onActivityResult(int reqCode, int resultCode, Intent data) {
+
+        Log.i("activityResult","reached activity result with following params:"
+                + reqCode + " , "
+                + resultCode );
+
         super.onActivityResult(reqCode, resultCode, data);
 
         switch (reqCode) {
@@ -257,6 +279,7 @@ public class MainActivity extends AppCompatActivity implements TabListener{
                             phones.moveToFirst();
                             cNumber = phones.getString(phones.getColumnIndex("data1"));
                             currentDialer.fixNumber(cNumber);
+                            currentDialer.execute();
                         }
                         String name = c.getString(c.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
 

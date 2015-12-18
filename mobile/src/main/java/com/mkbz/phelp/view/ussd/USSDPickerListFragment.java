@@ -14,8 +14,6 @@ import android.widget.ListView;
 import com.mkbz.phelp.MainActivity;
 import com.mkbz.phelp.R;
 import com.mkbz.phelp.datasource.ModelDataSource;
-import com.mkbz.phelp.dialer.Dialer;
-import com.mkbz.phelp.model.Emergency;
 import com.mkbz.phelp.model.USSD;
 
 import java.util.ArrayList;
@@ -143,8 +141,8 @@ public class USSDPickerListFragment extends Fragment{
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 USSD ussd = selectedUSSDList.get(position);
-                Intent intent = Dialer.getExecutable(ussd.getCode());
-                startActivity(intent);
+
+                MainActivity.runCommand(ussd.getCode());
             }
         });
         return view;
