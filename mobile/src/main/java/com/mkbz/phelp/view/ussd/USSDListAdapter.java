@@ -91,9 +91,10 @@ public class USSDListAdapter extends BaseAdapter {
 
         if (convertView == null) {
             cell = new Cell();
-            cellView = inflater.inflate(R.layout.fragment_list_emergency_item, null);
+            cellView = inflater.inflate(R.layout.fragment_list_ussd_item, null);
             cell.textView = (TextView) cellView.findViewById(R.id.row_title);
             cell.imageView = (ImageView) cellView.findViewById(R.id.row_icon);
+            cell.favorite = (ImageView) cellView.findViewById(R.id.favorite_icon);
             cellView.setTag(cell);
         } else {
             cell = (Cell) cellView.getTag();
@@ -106,6 +107,9 @@ public class USSDListAdapter extends BaseAdapter {
         if (getResId(drawableName)!=-1)
                 cell.imageView.setImageResource(getResId(drawableName));
         else cell.imageView.setImageResource(getResId("no_image_default"));
+
+        //favorite
+        cell.favorite.setImageResource(getResId("favorite_off"));
         return cellView;
     }
 
@@ -116,6 +120,8 @@ public class USSDListAdapter extends BaseAdapter {
     static class Cell {
         public TextView textView;
         public ImageView imageView;
+        public ImageView favorite;
+
     }
 
 }
