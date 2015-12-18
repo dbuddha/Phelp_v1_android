@@ -1,6 +1,5 @@
 package com.mkbz.phelp.dialer;
 
-import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
 import android.provider.ContactsContract;
@@ -38,15 +37,11 @@ public class DialCommand {
 
         manager.setCurrentDialer(this);
         manager.startActivityForResult(intent,1);
-
-
-
     }
 
 
     public void fixNumber(String cNumber) {
-        int index = this.code.indexOf("n");
-        code.replaceAll("n",cNumber);
+        code=code.replaceFirst("n",cNumber);
         execute();
     }
 }

@@ -190,6 +190,8 @@ public class OperatorPickerDialogFragment extends DialogFragment implements
                     listener.onSelectOperator(operator.getName(),
                             operator.getId());
                 }
+
+                MainActivity.ussdFragment.updatedOperator();
             }
         });
 

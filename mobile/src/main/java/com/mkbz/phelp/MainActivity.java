@@ -32,6 +32,7 @@ import com.mkbz.phelp.view.emergency.EmergencyPickerListFragment;
 import com.mkbz.phelp.view.favorite.FavoritePickerListFragment;
 import com.mkbz.phelp.view.operator.OperatorPickerDialogFragment;
 import com.mkbz.phelp.lists.*;
+import com.mkbz.phelp.view.ussd.USSDPickerListFragment;
 
 import java.lang.reflect.Field;
 import java.util.Locale;
@@ -72,6 +73,7 @@ public class MainActivity extends AppCompatActivity implements TabListener{
      */
     ViewPager mViewPager;
     public static EmergencyPickerListFragment emergencyFragment;
+    public static USSDPickerListFragment ussdFragment;
     public static FavoritePickerListFragment favoriteFragment;
 
     @Override
@@ -81,6 +83,8 @@ public class MainActivity extends AppCompatActivity implements TabListener{
 
         emergencyFragment = new EmergencyPickerListFragment();
         favoriteFragment = new FavoritePickerListFragment();
+        ussdFragment = new USSDPickerListFragment();
+
         sharedPreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
         // Set up the action bar.
         final ActionBar actionBar = getSupportActionBar();
@@ -242,10 +246,7 @@ public class MainActivity extends AppCompatActivity implements TabListener{
                     Uri contactData = data.getData();
                     Cursor c =  managedQuery(contactData, null, null, null, null);
                     if (c.moveToFirst()) {
-
-
                         String id =c.getString(c.getColumnIndexOrThrow(ContactsContract.Contacts._ID));
-
                         String hasPhone =c.getString(c.getColumnIndex(ContactsContract.Contacts.HAS_PHONE_NUMBER));
 
                         if (hasPhone.equalsIgnoreCase("1")) {
@@ -280,7 +281,7 @@ public class MainActivity extends AppCompatActivity implements TabListener{
      */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-        public Fragment[] fragments={favoriteFragment,emergencyFragment,new USSDList()};
+        public Fragment[] fragments={favoriteFragment,emergencyFragment,ussdFragment};
 
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
