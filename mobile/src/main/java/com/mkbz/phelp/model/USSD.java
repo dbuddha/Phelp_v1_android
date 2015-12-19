@@ -15,6 +15,7 @@ public class USSD extends Model {
     private String description;
     private String country;
     private int operator;
+    private boolean favorite;
 
     public USSD(){};
 
@@ -93,4 +94,10 @@ public class USSD extends Model {
     public void setOperator(int operator) {
         this.operator = operator;
     }
+
+
+    public boolean toggleFavorite(){
+        return this.favorite = !this.favorite;
+    }
+
 }
