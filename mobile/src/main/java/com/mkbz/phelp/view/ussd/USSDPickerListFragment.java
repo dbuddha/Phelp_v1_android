@@ -3,6 +3,7 @@ package com.mkbz.phelp.view.ussd;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,6 +25,7 @@ public class USSDPickerListFragment extends Fragment{
      * View components
      */
     private static ViewGroup container;
+    private FragmentActivity context;
     private ListView USSDListView;
 
     /**
@@ -64,7 +66,11 @@ public class USSDPickerListFragment extends Fragment{
        /* allEmergencysList=null;
         adapter.updateData(getAllEmergencys());*/
         allUSSDList = null;
-        adapter.updateData(getAllUSSD());
+        if (adapter!=null) adapter.updateData(getAllUSSD());
+        else {
+
+            adapter = new USSDListAdapter(context, selectedUSSDList);
+        }
         //adapter.notifyDataSetChanged();
     }
 
@@ -131,7 +137,8 @@ public class USSDPickerListFragment extends Fragment{
                 .findViewById(R.id.ussd_picker_listview);
 
         // Set adapter
-        adapter = new USSDListAdapter(getActivity(), selectedUSSDList);
+        context = getActivity();
+        adapter = new USSDListAdapter(context, selectedUSSDList);
         USSDListView.setAdapter(adapter);
 
         // Inform listener

@@ -7,6 +7,7 @@ import android.database.Cursor;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
@@ -24,8 +25,12 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.ListView;
 
 import com.mkbz.phelp.dialer.DialCommand;
+import com.mkbz.phelp.model.Emergency;
+import com.mkbz.phelp.model.USSD;
 import com.mkbz.phelp.view.country.CountryListAdapter;
 import com.mkbz.phelp.view.country.CountryPickerDialogFragment;
 import com.mkbz.phelp.view.emergency.EmergencyPickerListFragment;
@@ -51,6 +56,48 @@ public class MainActivity extends AppCompatActivity implements TabListener{
 
     public static SharedPreferences getSharedPreferences() {
         return sharedPreferences;
+    }
+
+
+    /**
+     * The drawable image name has the format "flag_$countryCode". We need to
+     * load the drawable dynamically from country code. Code from
+     * http://stackoverflow.com/
+     * questions/3042961/how-can-i-get-the-resource-id-of
+     * -an-image-if-i-know-its-name
+     *
+     * @param drawableName
+     * @return
+     */
+    private int getResId(String drawableName) {
+
+        try {
+            Class<R.drawable> res = R.drawable.class;
+            Field field = res.getField(drawableName);
+            int drawableId = field.getInt(null);
+            return drawableId;
+        } catch (Exception e) {
+            Log.e("USSDPicker", "Failure to get drawable id.", e);
+        }
+
+        return -1;
+    }
+    public void toggleFavorite(View v){
+        ListView listview = (ListView) v.getParent().getParent();
+        USSD aux = (USSD) listview.getItemAtPosition(listview.getPositionForView((View) v.getParent()));
+        String type="USSD";//é ussd ou emergency
+        long fk =  aux.getId();//fk do objecto clicado
+        boolean activo = aux.toggleFavorite();
+        ImageView icon = (ImageView) v;
+        if (activo) {
+            icon.setImageResource(getResId("favorite_on"));
+        // removelista()
+        } else {
+            icon.setImageResource(getResId("favorite_off"));
+       //     colocaiconon()
+        //    addlista()
+        }
+       // toggleBD(type,fk);
     }
 
     public static void setSharedPreferences(SharedPreferences sharedPreferences) {

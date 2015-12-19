@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -33,6 +34,7 @@ public class EmergencyPickerListFragment extends Fragment{
      * View components
      */
     private static ViewGroup container;
+    private FragmentActivity context;
     private ListView EmergencyListView;
 
     /**
@@ -73,7 +75,12 @@ public class EmergencyPickerListFragment extends Fragment{
        /* allEmergencysList=null;
         adapter.updateData(getAllEmergencys());*/
         allEmergencysList = null;
-        adapter.updateData(getAllEmergencys());
+
+        if (adapter!=null) adapter.updateData(getAllEmergencys());
+        else {
+
+            adapter = new EmergencyListAdapter(context, selectedEmergencysList);
+        }
         //adapter.notifyDataSetChanged();
     }
 
@@ -162,7 +169,8 @@ public class EmergencyPickerListFragment extends Fragment{
                 .findViewById(R.id.emergency_picker_listview);
 
         // Set adapter
-        adapter = new EmergencyListAdapter(getActivity(), selectedEmergencysList);
+        context = getActivity();
+        adapter = new EmergencyListAdapter(context, selectedEmergencysList);
         EmergencyListView.setAdapter(adapter);
 
         // Inform listener

@@ -7,7 +7,7 @@
         android:id="@+id/row_icon"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="2dp"
         android:padding="10dp"
         android:gravity="center_vertical" />
 
@@ -23,7 +23,8 @@
         android:id="@+id/favorite_icon"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginRight="2dp"
         android:padding="10dp"
-        android:gravity="center_vertical" />
+        android:gravity="center_vertical"
+        android:onClick="toggleFavorite"/>
 </LinearLayout>
