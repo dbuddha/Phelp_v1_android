@@ -85,7 +85,7 @@ public class OperatorPickerDialogFragment extends DialogFragment implements
                 allOperatorsList = new ArrayList<Operator>();
                 datasource = new ModelDataSource<>(getActivity(), Operator.TABLE,Operator.ID,new Operator());
                 datasource.open();
-                String aux = MainActivity.getSharedPreferences().getString("country_id", "US").toLowerCase();
+                String aux = MainActivity.getSharedPreferences().getString("country_id", "PT").toLowerCase();
                 Log.d(aux, "Country value before operator query");
                 allOperatorsList.addAll(datasource.getAll("country_id = ?", new String[]{aux}));
                // allOperatorsList.addAll(datasource.getAll(null,null));

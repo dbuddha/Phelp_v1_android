@@ -93,23 +93,25 @@ public class USSDListAdapter extends BaseAdapter {
             cell = new Cell();
             cellView = inflater.inflate(R.layout.fragment_list_ussd_item, null);
             cell.textView = (TextView) cellView.findViewById(R.id.row_title);
-            cell.imageView = (ImageView) cellView.findViewById(R.id.row_icon);
-            cell.favorite = (ImageView) cellView.findViewById(R.id.favorite_icon);
+       //     cell.imageView = (ImageView) cellView.findViewById(R.id.row_icon);
+      //      cell.favorite = (ImageView) cellView.findViewById(R.id.favorite_icon);
             cellView.setTag(cell);
         } else {
             cell = (Cell) cellView.getTag();
         }
-
-        cell.textView.setText(ussd.getTitle());
+        if(ussd.getTitle().length()!=0)
+             cell.textView.setText(ussd.getTitle());
+        else cell.textView.setText(ussd.getDescription());
 
         String drawableName = "ussd_"+ussd.getTitle().replace(' ', '_').toLowerCase();
-
+/*
         if (getResId(drawableName)!=-1)
                 cell.imageView.setImageResource(getResId(drawableName));
-        else cell.imageView.setImageResource(getResId("no_image_default"));
+        else cell.imageView.setImageResource(0);*/
+   //     else cell.imageView.setImageResource(getResId("no_image_default"));
 
         //favorite
-        cell.favorite.setImageResource(getResId("favorite_off"));
+//        cell.favorite.setImageResource(getResId("favorite_off"));
         return cellView;
     }
 

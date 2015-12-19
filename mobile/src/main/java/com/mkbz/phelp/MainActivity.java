@@ -167,15 +167,13 @@ public class MainActivity extends AppCompatActivity implements TabListener{
             }
         });
 
-
-
         // For each of the sections in the app, add a tab to the action bar.
         for (int i = 0; i < mSectionsPagerAdapter.getCount(); i++) {
             // Create a tab with text corresponding to the page title defined by
             // the adapter.java. Also specify this Activity object, which implements
             // the TabListener interface, as the callback (listener) for when
             // this tab is selected.
-            int[] icon = {R.drawable.ic_hearth, R.drawable.ic_sos, R.drawable.ic_ussd};
+            int[] icon = {R.drawable.ic_sos, R.drawable.ic_ussd};
             actionBar.addTab(
                     actionBar.newTab()
                             .setText("  " + mSectionsPagerAdapter.getPageTitle(i))
@@ -209,7 +207,7 @@ public class MainActivity extends AppCompatActivity implements TabListener{
 
     public static void updatedCountry() {
         countryIcon = menu.findItem(R.id.select_country);
-        String drawableName = "flag"+sharedPreferences.getString("country_id","US").toLowerCase(Locale.ENGLISH);
+        String drawableName = "flag"+sharedPreferences.getString("country_id","PT").toLowerCase(Locale.ENGLISH);
         int id = -1;
         try {
             Class<R.drawable> res = R.drawable.class;
@@ -227,7 +225,7 @@ public class MainActivity extends AppCompatActivity implements TabListener{
     private void setCountryIcon(Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.menu_main, menu);
         countryIcon = menu.findItem(R.id.select_country);
-        String drawableName = "flag"+sharedPreferences.getString("country_id","US").toLowerCase(Locale.ENGLISH);
+        String drawableName = "flag"+sharedPreferences.getString("country_id","PT").toLowerCase(Locale.ENGLISH);
         int id = -1;
         try {
             Class<R.drawable> res = R.drawable.class;
@@ -351,7 +349,7 @@ public class MainActivity extends AppCompatActivity implements TabListener{
      */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-        public Fragment[] fragments={favoriteFragment,emergencyFragment,ussdFragment};
+        public Fragment[] fragments={emergencyFragment,ussdFragment};
 
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
@@ -367,7 +365,7 @@ public class MainActivity extends AppCompatActivity implements TabListener{
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 3;
+            return 2;
         }
 
         @Override
@@ -375,10 +373,8 @@ public class MainActivity extends AppCompatActivity implements TabListener{
             Locale l = Locale.getDefault();
             switch (position) {
                 case 0:
-                    return getString(R.string.title_section1).toUpperCase(l);
-                case 1:
                     return getString(R.string.title_section2).toUpperCase(l);
-                case 2:
+                case 1:
                     return getString(R.string.title_section3).toUpperCase(l);
             }
             return null;

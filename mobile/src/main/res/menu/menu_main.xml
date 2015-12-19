@@ -4,13 +4,13 @@
 
     <item android:id="@+id/select_country" android:icon="@drawable/select_country_icon" android:title="@string/select_country_string"
         android:orderInCategory="100" app:showAsAction="always" />
-    <item android:id="@+id/action_search" android:icon="@drawable/ic_action_search" android:title="@string/action_search"
-        android:orderInCategory="100" app:showAsAction="ifRoom" />
+   <!-- <item android:id="@+id/action_search" android:icon="@drawable/ic_action_search" android:title="@string/action_search"
+        android:orderInCategory="100" app:showAsAction="ifRoom" />-->
     <item android:id="@+id/select_operator" android:title="@string/select_operator_string"
         android:orderInCategory="100" app:showAsAction="never" />
     <item android:id="@+id/contact_button" android:icon="@drawable/ic_action_mail" android:title="@string/contact_button"
         android:orderInCategory="100" app:showAsAction="ifRoom" />
-    <item android:id="@+id/about_button"  android:title="@string/about_button"
-        android:orderInCategory="100" app:showAsAction="never" />
+   <!-- <item android:id="@+id/about_button"  android:title="@string/about_button"
+        android:orderInCategory="100" app:showAsAction="never" />-->
 
 </menu>

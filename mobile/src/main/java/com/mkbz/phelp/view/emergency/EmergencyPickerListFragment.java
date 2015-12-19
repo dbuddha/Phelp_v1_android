@@ -96,7 +96,7 @@ public class EmergencyPickerListFragment extends Fragment{
                 allEmergencysList = new ArrayList<Emergency>();
                 datasource = new ModelDataSource<>(getActivity(), Emergency.TABLE, Emergency.ID, new Emergency());
                 datasource.open();
-                String aux = MainActivity.getSharedPreferences().getString("country_id", "US").toUpperCase();
+                String aux = MainActivity.getSharedPreferences().getString("country_id", "PT").toUpperCase();
                 Log.d(aux, "Country value before Emergency query");
                 allEmergencysList.addAll(datasource.getAll("country_id = ?", new String[]{aux}));
                 //allEmergencysList.addAll(datasource.getAll(null,null));

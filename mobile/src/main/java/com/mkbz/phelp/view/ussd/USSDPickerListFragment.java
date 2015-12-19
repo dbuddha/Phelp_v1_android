@@ -86,7 +86,7 @@ public class USSDPickerListFragment extends Fragment{
                 allUSSDList = new ArrayList<USSD>();
                 datasource = new ModelDataSource<>(getActivity(), USSD.TABLE, USSD.ID, new USSD());
                 datasource.open();
-                Long operator_id = MainActivity.getSharedPreferences().getLong("operator_id", 0);
+                Long operator_id = MainActivity.getSharedPreferences().getLong("operator_id", 688);
                 String aux = String.valueOf(operator_id);
                 Log.d(aux, "Country value before Emergency query");
                  allUSSDList.addAll(datasource.getAll("operator_id = ?", new String[]{aux}));
