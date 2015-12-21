@@ -27,6 +27,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -344,6 +345,7 @@ public class MainActivity extends AppCompatActivity implements TabListener{
         // Create textbox to put into the dialog
         final EditText input = new EditText(this);
         // put the textbox into the dialog
+        input.setInputType(EditorInfo.TYPE_CLASS_NUMBER);
         alert.setView(input);
         // procedure for when the ok button is clicked.
         alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
