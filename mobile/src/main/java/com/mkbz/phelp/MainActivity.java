@@ -29,6 +29,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 
@@ -357,6 +358,46 @@ public class MainActivity extends AppCompatActivity implements TabListener{
                 // ** HERE IS WHERE THE MAGIC HAPPENS! **
                 // now that we have stored the value, lets run our Runnable
                 postrun.run();
+                return;
+            }
+        });
+
+        alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+                return;
+            }
+        });
+        alert.show();
+    }
+    public void promptContactForResult(final PromptRunnable postRun,final PromptRunnable contactRun) {
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setTitle("Value");
+        alert.setMessage("Choose your value");
+        // Create textbox to put into the dialog
+        final EditText input = new EditText(this);
+
+        // put the textbox into the dialog
+        alert.setView(input);
+
+        alert.setNeutralButton("Contacts",new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                dialog.dismiss();
+                contactRun.run();
+                return;
+            }
+        });
+
+        // procedure for when the ok button is clicked.
+        alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                String value = input.getText().toString();
+                dialog.dismiss();
+                // set value from the dialog inside our runnable implementation
+                postRun.setValue(value);
+                // ** HERE IS WHERE THE MAGIC HAPPENS! **
+                // now that we have stored the value, lets run our Runnable
+                postRun.run();
                 return;
             }
         });

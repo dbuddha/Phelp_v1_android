@@ -41,19 +41,33 @@ public class DialCommand {
         return aux;
     }
 
+    private void getFromContact(){
+        Intent intent;
+        int reqCode;
+        reqCode = MainActivity.PICK_CONTACT;
+        Log.i("dialerExecute", "launching contact picker for code" + code);
+        intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
+        manager.setCurrentDialer(this);
+        manager.startActivityForResult(intent, reqCode);
+    }
+
     private void launchDialog(){
 
 
         if(code.indexOf("n") >=0) {
-            Intent intent;
-            int reqCode;
-            reqCode = MainActivity.PICK_CONTACT;
-            Log.i("dialerExecute", "launching contact picker for code" + code);
-            intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
-            manager.setCurrentDialer(this);
-            manager.startActivityForResult(intent, reqCode);
+            manager.promptContactForResult(new PromptRunnable(){
+                public void run() {
+                    String value=this.getValue();
+                    fixNumber(value);
+                }
+            }, new PromptRunnable(){
+                @Override
+                public void run() {
+                    getFromContact();
+                }
+            });
         }else{
-            manager.promptForResult(new PromptRunnable(){
+            manager.promptForResult(new PromptRunnable() {
                 // put whatever code you want to run after user enters a result
                 public void run() {
                     // get the value we stored from the dialog
