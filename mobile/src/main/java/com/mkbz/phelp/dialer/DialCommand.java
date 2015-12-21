@@ -6,6 +6,7 @@ import android.provider.ContactsContract;
 import android.util.Log;
 
 import com.mkbz.phelp.MainActivity;
+import com.mkbz.phelp.utils.DialogNumber;
 import com.mkbz.phelp.utils.Inputs;
 import com.mkbz.phelp.utils.Utils;
 
@@ -47,15 +48,14 @@ public class DialCommand {
 
         if(code.indexOf("n") >=0) {
             reqCode = MainActivity.PICK_CONTACT;
-            Log.i("dialerExecute", "launching contact picker for code" + code );
+            Log.i("dialerExecute", "launching contact picker for code" + code);
             intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
-            manager.setCurrentDialer(this);
-            manager.startActivityForResult(intent, reqCode);
         }else{
-
-            Inputs.valueDialog(context);
-
+            reqCode = MainActivity.PICK_VALUE;
+            intent = new Intent(context, DialogNumber.class);
         }
+        manager.setCurrentDialer(this);
+        manager.startActivityForResult(intent, reqCode);
     }
 
 
