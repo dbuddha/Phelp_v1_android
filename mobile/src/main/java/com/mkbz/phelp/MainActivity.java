@@ -1,6 +1,8 @@
 package com.mkbz.phelp;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
@@ -25,12 +27,14 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.mkbz.phelp.dialer.DialCommand;
 import com.mkbz.phelp.model.Emergency;
 import com.mkbz.phelp.model.USSD;
+import com.mkbz.phelp.utils.PromptRunnable;
 import com.mkbz.phelp.view.country.CountryListAdapter;
 import com.mkbz.phelp.view.country.CountryPickerDialogFragment;
 import com.mkbz.phelp.view.emergency.EmergencyPickerListFragment;
@@ -331,6 +335,37 @@ public class MainActivity extends AppCompatActivity implements TabListener{
                 }
                 break;
         }
+    }
+
+    public void promptForResult(final PromptRunnable postrun) {
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setTitle("Value");
+        alert.setMessage("Choose your value");
+        // Create textbox to put into the dialog
+        final EditText input = new EditText(this);
+        // put the textbox into the dialog
+        alert.setView(input);
+        // procedure for when the ok button is clicked.
+        alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                String value = input.getText().toString();
+                dialog.dismiss();
+                // set value from the dialog inside our runnable implementation
+                postrun.setValue(value);
+                // ** HERE IS WHERE THE MAGIC HAPPENS! **
+                // now that we have stored the value, lets run our Runnable
+                postrun.run();
+                return;
+            }
+        });
+
+        alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+                return;
+            }
+        });
+        alert.show();
     }
 
     public void setCurrentDialer(DialCommand currentDialer) {

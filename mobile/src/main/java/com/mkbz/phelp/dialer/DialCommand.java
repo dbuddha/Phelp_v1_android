@@ -7,7 +7,7 @@ import android.util.Log;
 
 import com.mkbz.phelp.MainActivity;
 import com.mkbz.phelp.utils.DialogNumber;
-import com.mkbz.phelp.utils.Inputs;
+import com.mkbz.phelp.utils.PromptRunnable;
 import com.mkbz.phelp.utils.Utils;
 
 /**
@@ -43,19 +43,26 @@ public class DialCommand {
 
     private void launchDialog(){
 
-        Intent intent;
-        int reqCode;
 
         if(code.indexOf("n") >=0) {
+            Intent intent;
+            int reqCode;
             reqCode = MainActivity.PICK_CONTACT;
             Log.i("dialerExecute", "launching contact picker for code" + code);
             intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
+            manager.setCurrentDialer(this);
+            manager.startActivityForResult(intent, reqCode);
         }else{
-            reqCode = MainActivity.PICK_VALUE;
-            intent = new Intent(context, DialogNumber.class);
+            manager.promptForResult(new PromptRunnable(){
+                // put whatever code you want to run after user enters a result
+                public void run() {
+                    // get the value we stored from the dialog
+                    String value = this.getValue();
+                    fixValue(value);
+                }
+            });
+
         }
-        manager.setCurrentDialer(this);
-        manager.startActivityForResult(intent, reqCode);
     }
 
 
