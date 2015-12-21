@@ -372,15 +372,16 @@ public class MainActivity extends AppCompatActivity implements TabListener{
     }
     public void promptContactForResult(final PromptRunnable postRun,final PromptRunnable contactRun) {
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setTitle("Value");
-        alert.setMessage("Choose your value");
+        alert.setTitle("Number");
+        alert.setMessage("Choose number");
         // Create textbox to put into the dialog
         final EditText input = new EditText(this);
-
+        input.setInputType(EditorInfo.TYPE_CLASS_NUMBER);
         // put the textbox into the dialog
         alert.setView(input);
 
-        alert.setNeutralButton("Contacts",new DialogInterface.OnClickListener() {
+        input.setInputType(EditorInfo.TYPE_CLASS_NUMBER);
+        alert.setNeutralButton("Contacts", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
                 dialog.dismiss();
                 contactRun.run();

@@ -8,8 +8,8 @@ android {
         applicationId "com.mkbz.phelp"
         minSdkVersion 15
         targetSdkVersion 23
-        versionCode 60
-        versionName "0.9.2"
+        versionCode 61
+        versionName "0.9.3"
     }
     buildTypes {
         release {
