@@ -6,6 +6,7 @@ import android.provider.ContactsContract;
 import android.util.Log;
 
 import com.mkbz.phelp.MainActivity;
+import com.mkbz.phelp.utils.Utils;
 
 /**
  * Created by MARCELO on 18-11-2015.
