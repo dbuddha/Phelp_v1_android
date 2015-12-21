@@ -38,18 +38,35 @@ public class DialCommand {
     }
 
     private void launchDialog(){
-        //TODO: vai faltar executar quando existe numero ou valor no ussd
 
-        Log.i("dialerExecute", "launching dialog for code" + code );
-        Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
+        Intent intent;
+        //TODO: vai faltar executar quando existe numero ou valor no ussd
+        if(code.indexOf("n") >=0) {
+            Log.i("dialerExecute", "launching contact picker for code" + code );
+            intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
+        }else{
+
+            Log.i("dialerExecute", "launching value for code" + code );
+            intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
+        }
+
         manager.setCurrentDialer(this);
-        manager.startActivityForResult(intent,1);
+        manager.startActivityForResult(intent, 1);
+
+
     }
 
 
     public void fixNumber(String cNumber) {
         Log.i("dialerExecute", "fixed with number:" + cNumber );
+        cNumber = Utils.fixNumber(cNumber);
         code=code.replaceFirst("n",cNumber);
+        execute();
+    }
+    public void fixValue(String cNumber) {
+        Log.i("dialerExecute", "fixed with value:" + cNumber );
+        cNumber = Utils.fixNumber(cNumber);
+        code=code.replaceFirst("v",cNumber);
         execute();
     }
 }

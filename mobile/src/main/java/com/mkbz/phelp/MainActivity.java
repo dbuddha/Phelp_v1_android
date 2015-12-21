@@ -200,7 +200,6 @@ public class MainActivity extends AppCompatActivity implements TabListener{
     public static void runCommand(String code){
         DialCommand command = new DialCommand(code,fragmentManager);
         currentDialer = command;
-
         currentDialer.execute();
 
     }
@@ -324,7 +323,6 @@ public class MainActivity extends AppCompatActivity implements TabListener{
                             phones.moveToFirst();
                             cNumber = phones.getString(phones.getColumnIndex("data1"));
                             currentDialer.fixNumber(cNumber);
-                            currentDialer.execute();
                         }
                         String name = c.getString(c.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
 
