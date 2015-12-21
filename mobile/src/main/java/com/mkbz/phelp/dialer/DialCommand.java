@@ -21,6 +21,7 @@ public class DialCommand {
     public DialCommand(String code,MainActivity fm){
         this.code=code;
         this.manager=fm;
+        this.context = manager.getApplicationContext();
     }
 
     public void execute(){
