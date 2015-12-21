@@ -48,7 +48,8 @@ public class MainActivity extends AppCompatActivity implements TabListener{
     public static final String OPERATOR_PICKER = "OPERATOR_PICKER";
     public static final String COLOR_BACKGROUND_PHELP = "#BF392B";
     // Declare
-    static final int PICK_CONTACT=1;
+    public static final int PICK_CONTACT=1;
+    public static final int PICK_VALUE=2;
 
     private static final Drawable background_color = new ColorDrawable(Color.parseColor(COLOR_BACKGROUND_PHELP));
     public static Menu menu;
@@ -299,11 +300,10 @@ public class MainActivity extends AppCompatActivity implements TabListener{
     @Override
     public void onActivityResult(int reqCode, int resultCode, Intent data) {
 
-        Log.i("activityResult","reached activity result with following params:"
-                + reqCode + " , "
-                + resultCode );
-
         super.onActivityResult(reqCode, resultCode, data);
+        Log.i("activityResult", "reached activity result with following params:"
+                + reqCode + " , "
+                + resultCode);
 
         switch (reqCode) {
             case (PICK_CONTACT) :

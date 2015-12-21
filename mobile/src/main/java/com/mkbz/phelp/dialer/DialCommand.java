@@ -6,6 +6,7 @@ import android.provider.ContactsContract;
 import android.util.Log;
 
 import com.mkbz.phelp.MainActivity;
+import com.mkbz.phelp.utils.Inputs;
 import com.mkbz.phelp.utils.Utils;
 
 /**
@@ -41,20 +42,19 @@ public class DialCommand {
     private void launchDialog(){
 
         Intent intent;
-        //TODO: vai faltar executar quando existe numero ou valor no ussd
+        int reqCode;
+
         if(code.indexOf("n") >=0) {
+            reqCode = MainActivity.PICK_CONTACT;
             Log.i("dialerExecute", "launching contact picker for code" + code );
             intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
+            manager.setCurrentDialer(this);
+            manager.startActivityForResult(intent, reqCode);
         }else{
 
-            Log.i("dialerExecute", "launching value for code" + code );
-            intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
+            Inputs.valueDialog(context);
+
         }
-
-        manager.setCurrentDialer(this);
-        manager.startActivityForResult(intent, 1);
-
-
     }
 
 
